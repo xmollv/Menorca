@@ -51,11 +51,19 @@
 			isa = PBXGroup;
 			children = (
 				B149BC711EFEBC0300359005 /* AppDelegate.swift */,
+				B149BC851EFEBDAE00359005 /* Extra */,
+			);
+			path = Menorca;
+			sourceTree = "<group>";
+		};
+		B149BC851EFEBDAE00359005 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
 				B149BC781EFEBC0300359005 /* Assets.xcassets */,
 				B149BC7A1EFEBC0300359005 /* LaunchScreen.storyboard */,
 				B149BC7D1EFEBC0300359005 /* Info.plist */,
 			);
-			path = Menorca;
+			name = Extra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +306,7 @@
 				B149BC821EFEBC0300359005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
