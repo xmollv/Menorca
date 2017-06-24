@@ -25,6 +25,11 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBar.barTintColor = .mediumCandy
+        tabBar.isTranslucent = false
+        tabBar.tintColor = .white
+        
         setViewControllers([navigationFiestasController], animated: true)
     }
 
