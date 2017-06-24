@@ -20,23 +20,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiestas!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-Gj-jq4">
-                                <rect key="frame" x="157.5" y="323" width="59.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-DD-Ypv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="26b-cg-yEE">
+                                    <size key="itemSize" width="375" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FiestasCell" id="Jeo-CC-vEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SantJoan" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-7n-aGo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="oMN-7n-aGo" firstAttribute="leading" secondItem="Jeo-CC-vEf" secondAttribute="leading" id="CcH-1T-WFQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" id="FBu-8L-apz"/>
+                                            <constraint firstItem="oMN-7n-aGo" firstAttribute="top" secondItem="Jeo-CC-vEf" secondAttribute="top" id="J7R-D1-GcD"/>
+                                            <constraint firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" id="dFJ-pB-qVv"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gw0-Gj-jq4" firstAttribute="centerY" secondItem="jB9-hH-ArJ" secondAttribute="centerY" id="Ffh-AB-Sh7"/>
-                            <constraint firstItem="gw0-Gj-jq4" firstAttribute="centerX" secondItem="jB9-hH-ArJ" secondAttribute="centerX" id="IDr-HY-d6E"/>
+                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="leading" secondItem="jB9-hH-ArJ" secondAttribute="leading" id="Qvb-Cl-xjY"/>
+                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="top" secondItem="mu4-aY-aiQ" secondAttribute="bottom" id="Zkv-Hw-hE1"/>
+                            <constraint firstAttribute="trailing" secondItem="l7Y-DD-Ypv" secondAttribute="trailing" id="c9X-o1-xr7"/>
+                            <constraint firstItem="epI-Rg-afX" firstAttribute="top" secondItem="l7Y-DD-Ypv" secondAttribute="bottom" id="ghM-1A-bum"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="l7Y-DD-Ypv" id="tiQ-gA-CCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twr-1a-3fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="-91"/>
+            <point key="canvasLocation" x="128.80000000000001" y="-91.304347826086968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SantJoan" width="650" height="449"/>
+    </resources>
 </document>
