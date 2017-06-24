@@ -10,10 +10,11 @@
 		B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BC711EFEBC0300359005 /* AppDelegate.swift */; };
 		B149BC791EFEBC0300359005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B149BC781EFEBC0300359005 /* Assets.xcassets */; };
 		B149BC7C1EFEBC0300359005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B149BC7A1EFEBC0300359005 /* LaunchScreen.storyboard */; };
-		B149BC881EFEBE7F00359005 /* UIViewController Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BC871EFEBE7F00359005 /* UIViewController Extensions.swift */; };
+		B149BC881EFEBE7F00359005 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BC871EFEBE7F00359005 /* UIViewController.swift */; };
 		B185CD3C1EFEC1AF000A2618 /* FiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD3B1EFEC1AF000A2618 /* FiestasViewController.swift */; };
 		B185CD3E1EFEC1C1000A2618 /* Fiestas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B185CD3D1EFEC1C1000A2618 /* Fiestas.storyboard */; };
 		B185CD441EFEC45C000A2618 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD431EFEC45C000A2618 /* TabBarController.swift */; };
+		B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD451EFECA6C000A2618 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +23,11 @@
 		B149BC781EFEBC0300359005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B149BC7B1EFEBC0300359005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B149BC7D1EFEBC0300359005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B149BC871EFEBE7F00359005 /* UIViewController Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extensions.swift"; sourceTree = "<group>"; };
+		B149BC871EFEBE7F00359005 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		B185CD3B1EFEC1AF000A2618 /* FiestasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestasViewController.swift; sourceTree = "<group>"; };
 		B185CD3D1EFEC1C1000A2618 /* Fiestas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fiestas.storyboard; sourceTree = "<group>"; };
 		B185CD431EFEC45C000A2618 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B185CD451EFECA6C000A2618 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 		B149BC861EFEBE6100359005 /* UIKit Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B149BC871EFEBE7F00359005 /* UIViewController Extensions.swift */,
+				B149BC871EFEBE7F00359005 /* UIViewController.swift */,
+				B185CD451EFECA6C000A2618 /* UIColor.swift */,
 			);
 			name = "UIKit Extensions";
 			sourceTree = "<group>";
@@ -176,7 +179,8 @@
 				B185CD3C1EFEC1AF000A2618 /* FiestasViewController.swift in Sources */,
 				B185CD441EFEC45C000A2618 /* TabBarController.swift in Sources */,
 				B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */,
-				B149BC881EFEBE7F00359005 /* UIViewController Extensions.swift in Sources */,
+				B149BC881EFEBE7F00359005 /* UIViewController.swift in Sources */,
+				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +218,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -269,6 +275,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

@@ -10,15 +10,21 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    lazy var fiestasViewController: FiestasViewController = {
+    lazy var navigationFiestasController: UINavigationController = {
         let fiestasViewController = FiestasViewController.instantiateFrom(.fiestas)
         fiestasViewController.tabBarItem.title = "Fiestas"
-        return fiestasViewController
+        fiestasViewController.title = "Fiestas"
+        
+        let navigationController = UINavigationController(rootViewController: fiestasViewController)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barTintColor = .mediumCandy
+        navigationController.navigationBar.tintColor = .white
+        return navigationController
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewControllers([fiestasViewController], animated: true)
+        setViewControllers([navigationFiestasController], animated: true)
     }
 
 }
