@@ -24,9 +24,13 @@
 		B1D9D51A1F003D90009B0A49 /* FiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5191F003D90009B0A49 /* FiestasCell.swift */; };
 		B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */; };
 		B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */; };
+		D9FCC5AF0C8ED4A5F5D4B19D /* Pods_Menorca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F93F58215FBF99E359D22A /* Pods_Menorca.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23589DFCB183291A5BE2670E /* Pods-Menorca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menorca.release.xcconfig"; path = "Pods/Target Support Files/Pods-Menorca/Pods-Menorca.release.xcconfig"; sourceTree = "<group>"; };
+		72F93F58215FBF99E359D22A /* Pods_Menorca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menorca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7004751079FCA4CC76D6393 /* Pods-Menorca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menorca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Menorca/Pods-Menorca.debug.xcconfig"; sourceTree = "<group>"; };
 		B1424B721EFFC15400D8209F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B1424B751EFFC20E00D8209F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B149BC6E1EFEBC0300359005 /* Menorca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menorca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,12 +57,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FCC5AF0C8ED4A5F5D4B19D /* Pods_Menorca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44732B5C0DF2404E326F674C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72F93F58215FBF99E359D22A /* Pods_Menorca.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1424B741EFFC1F900D8209F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,8 @@
 			children = (
 				B149BC701EFEBC0300359005 /* Menorca */,
 				B149BC6F1EFEBC0300359005 /* Products */,
+				E951576FCC0CD2D8518CB397 /* Pods */,
+				44732B5C0DF2404E326F674C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +187,15 @@
 			name = TimelineViewController;
 			sourceTree = "<group>";
 		};
+		E951576FCC0CD2D8518CB397 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7004751079FCA4CC76D6393 /* Pods-Menorca.debug.xcconfig */,
+				23589DFCB183291A5BE2670E /* Pods-Menorca.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B149BC801EFEBC0300359005 /* Build configuration list for PBXNativeTarget "Menorca" */;
 			buildPhases = (
+				DE3E324062B0663BE0A9E9CB /* [CP] Check Pods Manifest.lock */,
 				B149BC6A1EFEBC0200359005 /* Sources */,
 				B149BC6B1EFEBC0200359005 /* Frameworks */,
 				B149BC6C1EFEBC0200359005 /* Resources */,
+				B5FAD2E5D823B9C0EC75DF35 /* [CP] Embed Pods Frameworks */,
+				C8387A77CFB68C5514962CED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +266,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5FAD2E5D823B9C0EC75DF35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Menorca/Pods-Menorca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8387A77CFB68C5514962CED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Menorca/Pods-Menorca-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3E324062B0663BE0A9E9CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B149BC6A1EFEBC0200359005 /* Sources */ = {
@@ -383,6 +458,7 @@
 		};
 		B149BC811EFEBC0300359005 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7004751079FCA4CC76D6393 /* Pods-Menorca.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63PYRNNP7M;
@@ -398,6 +474,7 @@
 		};
 		B149BC821EFEBC0300359005 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23589DFCB183291A5BE2670E /* Pods-Menorca.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63PYRNNP7M;

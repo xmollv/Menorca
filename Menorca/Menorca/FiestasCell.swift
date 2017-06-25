@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FiestasCell: UICollectionViewCell {
     
@@ -47,7 +48,7 @@ class FiestasCell: UICollectionViewCell {
     }
     
     func configure(with fiesta: Fiesta) {
-        fiestaBackgroundImage.image = UIImage(named: "SantJoan")
+        fiestaBackgroundImage.sd_setImage(with: URL(string: fiesta.headerImage))
         fiestaName.text = fiesta.name
         fiestaLocation.text = fiesta.location
         
