@@ -13,6 +13,7 @@ class TabBarController: UITabBarController {
     lazy var navigationFiestasController: UINavigationController = {
         let fiestasViewController = FiestasViewController.instantiateFrom(.fiestas)
         fiestasViewController.tabBarItem.title = "Fiestas"
+        fiestasViewController.tabBarItem.image = UIImage(named:"horse")
         fiestasViewController.title = "Fiestas"
         
         let navigationController = UINavigationController(rootViewController: fiestasViewController)
