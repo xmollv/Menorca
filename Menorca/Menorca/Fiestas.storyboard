@@ -30,7 +30,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FiestasCell" id="Jeo-CC-vEf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FiestasCell" id="Jeo-CC-vEf" customClass="FiestasCell" customModule="Menorca" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -147,6 +147,9 @@
                                             <constraint firstAttribute="trailing" secondItem="weg-Lp-0ei" secondAttribute="trailing" id="NyZ-72-AlK"/>
                                             <constraint firstItem="weg-Lp-0ei" firstAttribute="leading" secondItem="Jeo-CC-vEf" secondAttribute="leading" id="tOK-gQ-cKl"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="fiestaName" destination="wt2-4M-byN" id="PhK-Nx-3SR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
