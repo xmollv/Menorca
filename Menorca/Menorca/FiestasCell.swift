@@ -10,6 +10,7 @@ import UIKit
 
 class FiestasCell: UICollectionViewCell {
     
+    @IBOutlet private var fiestaBackgroundImage: UIImageView!
     @IBOutlet private var fiestaName: UILabel!
     @IBOutlet private var fiestaLocation: UILabel!
     @IBOutlet private var fiestaDates: UILabel!
@@ -39,12 +40,14 @@ class FiestasCell: UICollectionViewCell {
     }
     
     private func clearCell() {
+        fiestaBackgroundImage.image = nil
         fiestaName.text = nil
         fiestaLocation.text = nil
         fiestaDates.text = nil
     }
     
     func configure(with fiesta: Fiesta) {
+        fiestaBackgroundImage.image = UIImage(named: "SantJoan")
         fiestaName.text = fiesta.name
         fiestaLocation.text = fiesta.location
         
@@ -53,7 +56,6 @@ class FiestasCell: UICollectionViewCell {
         
         let interval = dateIntervalFormatter.string(from: startDate, to: endDate)
         fiestaDates.text = interval
-        
     }
     
 }

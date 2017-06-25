@@ -148,6 +148,7 @@
                                             <constraint firstItem="weg-Lp-0ei" firstAttribute="leading" secondItem="Jeo-CC-vEf" secondAttribute="leading" id="tOK-gQ-cKl"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="fiestaBackgroundImage" destination="oMN-7n-aGo" id="udL-Im-sMd"/>
                                             <outlet property="fiestaDates" destination="kaU-QK-geG" id="qqH-fr-UuP"/>
                                             <outlet property="fiestaLocation" destination="FpS-Ma-WGj" id="4NW-Z5-8Dq"/>
                                             <outlet property="fiestaName" destination="wt2-4M-byN" id="PhK-Nx-3SR"/>
