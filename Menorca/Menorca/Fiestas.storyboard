@@ -44,7 +44,7 @@
                                                             <rect key="frame" x="10" y="5" width="355" height="140"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="5"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
@@ -65,29 +65,53 @@
                                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="5"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sant Joan" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt2-4M-byN">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="18c-hx-zxh">
                                                             <rect key="frame" x="15" y="121" width="345" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sant Joan" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt2-4M-byN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259.5" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nLs-Gs-0pI">
+                                                                    <rect key="frame" x="269.5" y="5" width="75.5" height="14.5"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="GQN-TH-OHZ">
+                                                                            <rect key="frame" x="0.0" y="1" width="12" height="12"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="12" id="7TQ-VV-y2x"/>
+                                                                                <constraint firstAttribute="height" constant="12" id="NLE-IO-YV0"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Ciutadella" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpS-Ma-WGj">
+                                                                            <rect key="frame" x="16" y="0.0" width="59.5" height="14.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="top" secondItem="oMN-7n-aGo" secondAttribute="top" id="0Tm-Ql-zRU"/>
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" id="3ip-a5-z7A"/>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="trailing" secondItem="18c-hx-zxh" secondAttribute="trailing" constant="5" id="5bY-2h-hd3"/>
+                                                        <constraint firstItem="18c-hx-zxh" firstAttribute="leading" secondItem="mZm-lv-lO6" secondAttribute="leading" constant="5" id="7G5-gc-8N8"/>
                                                         <constraint firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" constant="5" id="Gs7-Tv-aVz"/>
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" id="Hhr-3e-jai"/>
-                                                        <constraint firstItem="oMN-7n-aGo" firstAttribute="trailing" secondItem="wt2-4M-byN" secondAttribute="trailing" constant="5" id="LVs-KG-0qt"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="leading" secondItem="weg-Lp-0ei" secondAttribute="leading" constant="10" id="MJN-Iz-4bZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" constant="10" id="VSJ-u7-MLC"/>
+                                                        <constraint firstItem="18c-hx-zxh" firstAttribute="bottom" secondItem="mZm-lv-lO6" secondAttribute="bottom" id="Xxn-rv-5h6"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="top" secondItem="weg-Lp-0ei" secondAttribute="top" constant="5" id="aLd-7p-W2P"/>
-                                                        <constraint firstItem="wt2-4M-byN" firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" id="lMf-oD-QYS"/>
-                                                        <constraint firstItem="wt2-4M-byN" firstAttribute="leading" secondItem="oMN-7n-aGo" secondAttribute="leading" constant="5" id="lrf-Os-DpG"/>
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="leading" secondItem="oMN-7n-aGo" secondAttribute="leading" id="vvy-ZQ-VIR"/>
                                                     </constraints>
                                                 </view>
@@ -122,5 +146,6 @@
     </scenes>
     <resources>
         <image name="SantJoan" width="650" height="449"/>
+        <image name="location" width="12" height="12"/>
     </resources>
 </document>
