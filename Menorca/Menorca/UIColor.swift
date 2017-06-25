@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    class var mediumCandy: UIColor { return UIColor(red: 225/255, green: 15/255, blue: 34/255, alpha: 1) }
+    class var purple: UIColor { return UIColor(red: 150/255, green: 20/255, blue: 50/255, alpha: 1) }
 }
