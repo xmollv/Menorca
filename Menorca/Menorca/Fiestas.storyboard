@@ -42,14 +42,53 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SantJoan" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-7n-aGo">
                                                             <rect key="frame" x="10" y="5" width="355" height="140"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZm-lv-lO6" customClass="GradientView" customModule="Menorca" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="5" width="355" height="140"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                                                    <real key="value" value="0.59999999999999998"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sant Joan" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt2-4M-byN">
+                                                            <rect key="frame" x="15" y="121" width="345" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="top" secondItem="oMN-7n-aGo" secondAttribute="top" id="0Tm-Ql-zRU"/>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" id="3ip-a5-z7A"/>
                                                         <constraint firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" constant="5" id="Gs7-Tv-aVz"/>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" id="Hhr-3e-jai"/>
+                                                        <constraint firstItem="oMN-7n-aGo" firstAttribute="trailing" secondItem="wt2-4M-byN" secondAttribute="trailing" constant="5" id="LVs-KG-0qt"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="leading" secondItem="weg-Lp-0ei" secondAttribute="leading" constant="10" id="MJN-Iz-4bZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" constant="10" id="VSJ-u7-MLC"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="top" secondItem="weg-Lp-0ei" secondAttribute="top" constant="5" id="aLd-7p-W2P"/>
+                                                        <constraint firstItem="wt2-4M-byN" firstAttribute="bottom" secondItem="oMN-7n-aGo" secondAttribute="bottom" id="lMf-oD-QYS"/>
+                                                        <constraint firstItem="wt2-4M-byN" firstAttribute="leading" secondItem="oMN-7n-aGo" secondAttribute="leading" constant="5" id="lrf-Os-DpG"/>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="leading" secondItem="oMN-7n-aGo" secondAttribute="leading" id="vvy-ZQ-VIR"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

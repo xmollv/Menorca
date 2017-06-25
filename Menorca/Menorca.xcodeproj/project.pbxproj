@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1424B731EFFC15400D8209F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1424B721EFFC15400D8209F /* UIView.swift */; };
+		B1424B761EFFC20E00D8209F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1424B751EFFC20E00D8209F /* GradientView.swift */; };
 		B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BC711EFEBC0300359005 /* AppDelegate.swift */; };
 		B149BC791EFEBC0300359005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B149BC781EFEBC0300359005 /* Assets.xcassets */; };
 		B149BC7C1EFEBC0300359005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B149BC7A1EFEBC0300359005 /* LaunchScreen.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1424B721EFFC15400D8209F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B1424B751EFFC20E00D8209F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B149BC6E1EFEBC0300359005 /* Menorca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menorca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B149BC711EFEBC0300359005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B149BC781EFEBC0300359005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1424B741EFFC1F900D8209F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1424B751EFFC20E00D8209F /* GradientView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B1424B771EFFC22200D8209F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B1424B781EFFC22800D8209F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B185CD401EFEC40F000A2618 /* TabBarController */,
+				B185CD3F1EFEC3F4000A2618 /* FiestasViewController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		B149BC651EFEBC0200359005 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				B149BC711EFEBC0300359005 /* AppDelegate.swift */,
-				B185CD401EFEC40F000A2618 /* TabBarController */,
-				B185CD3F1EFEC3F4000A2618 /* FiestasViewController */,
-				B149BC861EFEBE6100359005 /* UIKit Extensions */,
+				B1424B771EFFC22200D8209F /* Model */,
+				B1424B741EFFC1F900D8209F /* View */,
+				B1424B781EFFC22800D8209F /* Controller */,
 				B149BC851EFEBDAE00359005 /* Extra */,
 			);
 			path = Menorca;
@@ -72,6 +100,7 @@
 		B149BC851EFEBDAE00359005 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				B149BC861EFEBE6100359005 /* UIKit Extensions */,
 				B149BC781EFEBC0300359005 /* Assets.xcassets */,
 				B149BC7A1EFEBC0300359005 /* LaunchScreen.storyboard */,
 				B149BC7D1EFEBC0300359005 /* Info.plist */,
@@ -84,6 +113,7 @@
 			children = (
 				B149BC871EFEBE7F00359005 /* UIViewController.swift */,
 				B185CD451EFECA6C000A2618 /* UIColor.swift */,
+				B1424B721EFFC15400D8209F /* UIView.swift */,
 			);
 			name = "UIKit Extensions";
 			sourceTree = "<group>";
@@ -180,6 +210,8 @@
 				B185CD441EFEC45C000A2618 /* TabBarController.swift in Sources */,
 				B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */,
 				B149BC881EFEBE7F00359005 /* UIViewController.swift in Sources */,
+				B1424B761EFFC20E00D8209F /* GradientView.swift in Sources */,
+				B1424B731EFFC15400D8209F /* UIView.swift in Sources */,
 				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
