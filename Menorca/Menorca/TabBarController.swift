@@ -19,6 +19,7 @@ class TabBarController: UITabBarController {
         let navigationController = UINavigationController(rootViewController: fiestasViewController)
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
         
         return navigationController

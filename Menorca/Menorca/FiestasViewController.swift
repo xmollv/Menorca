@@ -31,7 +31,11 @@ extension FiestasViewController: UICollectionViewDataSource {
 }
 
 extension FiestasViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Tapped: \(indexPath.row)")
+        let timelineViewController = TimelineViewController.instantiateFrom(.timeline)
+        navigationController?.pushViewController(timelineViewController, animated: true)
+    }
 }
 
 extension FiestasViewController: UICollectionViewDelegateFlowLayout {

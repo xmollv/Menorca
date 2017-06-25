@@ -17,6 +17,8 @@
 		B185CD441EFEC45C000A2618 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD431EFEC45C000A2618 /* TabBarController.swift */; };
 		B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD451EFECA6C000A2618 /* UIColor.swift */; };
 		B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */; };
+		B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */; };
+		B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B185CD431EFEC45C000A2618 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B185CD451EFECA6C000A2618 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 			children = (
 				B185CD3B1EFEC1AF000A2618 /* FiestasViewController.swift */,
 				B185CD3D1EFEC1C1000A2618 /* Fiestas.storyboard */,
+				B1E6E4F81EFFEB3B00B3550B /* TimelineViewController */,
 			);
 			name = FiestasViewController;
 			sourceTree = "<group>";
@@ -133,6 +138,15 @@
 				B185CD431EFEC45C000A2618 /* TabBarController.swift */,
 			);
 			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		B1E6E4F81EFFEB3B00B3550B /* TimelineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */,
+				B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */,
+			);
+			name = TimelineViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B185CD3E1EFEC1C1000A2618 /* Fiestas.storyboard in Resources */,
+				B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */,
 				B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */,
 				B149BC7C1EFEBC0300359005 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -211,6 +226,7 @@
 				B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */,
 				B149BC881EFEBE7F00359005 /* UIViewController.swift in Sources */,
 				B1424B761EFFC20E00D8209F /* GradientView.swift in Sources */,
+				B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */,
 				B1424B731EFFC15400D8209F /* UIView.swift in Sources */,
 				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
 			);
