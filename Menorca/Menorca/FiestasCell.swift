@@ -11,6 +11,22 @@ import UIKit
 class FiestasCell: UICollectionViewCell {
     
     @IBOutlet private var fiestaName: UILabel!
+    @IBOutlet private var fiestaLocation: UILabel!
+    @IBOutlet private var fiestaDates: UILabel!
+    
+    lazy var dateFormatterFromServer: ISO8601DateFormatter = {
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter
+    }()
+    
+    lazy var dateIntervalFormatter: DateIntervalFormatter = {
+        let dateIntervalFormatter = DateIntervalFormatter()
+        dateIntervalFormatter.dateTemplate = "dd MMMM"
+        dateIntervalFormatter.calendar = Calendar.current
+        dateIntervalFormatter.locale = Locale.current
+        dateIntervalFormatter.timeZone = TimeZone.current
+        return dateIntervalFormatter
+    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +40,20 @@ class FiestasCell: UICollectionViewCell {
     
     private func clearCell() {
         fiestaName.text = nil
+        fiestaLocation.text = nil
+        fiestaDates.text = nil
     }
     
     func configure(with fiesta: Fiesta) {
         fiestaName.text = fiesta.name
+        fiestaLocation.text = fiesta.location
+        
+        guard let startDate = dateFormatterFromServer.date(from: fiesta.startDate),
+            let endDate = dateFormatterFromServer.date(from: fiesta.endDate) else { return }
+        
+        let interval = dateIntervalFormatter.string(from: startDate, to: endDate)
+        fiestaDates.text = interval
+        
     }
     
 }
