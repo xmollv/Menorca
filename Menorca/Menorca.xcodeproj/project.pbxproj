@@ -20,6 +20,7 @@
 		B1D9D5121F002558009B0A49 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5111F002558009B0A49 /* Webservice.swift */; };
 		B1D9D5141F002A21009B0A49 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5131F002A21009B0A49 /* DataProvider.swift */; };
 		B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5151F00309F009B0A49 /* Fiesta.swift */; };
+		B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */; };
 		B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */; };
 		B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		B1D9D5111F002558009B0A49 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		B1D9D5131F002A21009B0A49 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B1D9D5151F00309F009B0A49 /* Fiesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiesta.swift; sourceTree = "<group>"; };
+		B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				B149BC711EFEBC0300359005 /* AppDelegate.swift */,
-				B1D9D5101F00253A009B0A49 /* Data Provider */,
 				B1424B771EFFC22200D8209F /* Model */,
 				B1424B741EFFC1F900D8209F /* View */,
 				B1424B781EFFC22800D8209F /* Controller */,
+				B1D9D5101F00253A009B0A49 /* Data Provider */,
 				B149BC851EFEBDAE00359005 /* Extra */,
 			);
 			path = Menorca;
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B185CD431EFEC45C000A2618 /* TabBarController.swift */,
+				B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */,
 			);
 			name = TabBarController;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */,
 				B185CD3E1EFEC1C1000A2618 /* Fiestas.storyboard in Resources */,
 				B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */,
 				B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */,

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 enum Storyboard: String {
+    case tabBar
     case fiestas
     case timeline
 }

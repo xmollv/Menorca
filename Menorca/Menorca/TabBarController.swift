@@ -10,8 +10,11 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    var dataProvider: DataProvider!
+    
     lazy var navigationFiestasController: UINavigationController = {
         let fiestasViewController = FiestasViewController.instantiateFrom(.fiestas)
+        fiestasViewController.dataProvider = self.dataProvider
         fiestasViewController.tabBarItem.title = "Fiestas"
         fiestasViewController.tabBarItem.image = UIImage(named:"horse")
         fiestasViewController.title = "Fiestas"
@@ -24,7 +27,7 @@ class TabBarController: UITabBarController {
         
         return navigationController
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

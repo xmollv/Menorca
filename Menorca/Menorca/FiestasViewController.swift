@@ -12,17 +12,20 @@ class FiestasViewController: UIViewController {
     
     @IBOutlet private var collectionView: UICollectionView!
     
+    var dataProvider: DataProvider!
+    var fiestas: [Fiesta]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        
-        
-        DataProvider.shared.requestMultiple(HTTPMethod.get, Endpoint.fiestas) { (result: Result<[Fiesta]>) in
+        dataProvider.requestMultiple(.get, .fiestas) { [weak weakSelf = self] (result: Result<[Fiesta]>) in
+            guard let weakSelf = weakSelf else { return }
             switch result {
             case .isSuccess(let fiestas):
-                dump(fiestas)
+                weakSelf.fiestas = fiestas
+                weakSelf.collectionView.reloadData()
             case .isFailure(let error):
                 dump(error)
             }
