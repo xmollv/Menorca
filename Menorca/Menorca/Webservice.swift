@@ -9,39 +9,6 @@
 import Foundation
 import UIKit
 
-enum Result<T> {
-    case isSuccess(T)
-    case isFailure(NetworkError)
-}
-
-enum NetworkError {
-    case unknown
-    case malformedUrl
-    case not200Status
-    case malformedJson
-    case noData
-}
-
-typealias CompletionType<T> = (Result<T>) -> ()
-typealias JSONDictionary = Dictionary<String,Any>
-typealias JSONArray = Array<JSONDictionary>
-
-enum HTTPMethod: String {
-    case get = "GET"
-}
-
-enum Endpoint {
-    case fiestas
-    
-    var path: String {
-        let baseUrl = "http://localhost:8000"
-        switch self {
-        case .fiestas:
-            return "\(baseUrl)/fiestas.json"
-        }
-    }
-}
-
 final class Webservice: NSObject {
     
     private var numberOfCallsToSetVisible = 0
@@ -122,6 +89,39 @@ final class Webservice: NSObject {
             case .isFailure(let error):
                 completion(Result.isFailure(error))
             }
+        }
+    }
+}
+
+enum NetworkError {
+    case unknown
+    case malformedUrl
+    case not200Status
+    case malformedJson
+    case noData
+}
+
+enum Result<T> {
+    case isSuccess(T)
+    case isFailure(NetworkError)
+}
+
+typealias CompletionType<T> = (Result<T>) -> ()
+typealias JSONDictionary = Dictionary<String,Any>
+typealias JSONArray = Array<JSONDictionary>
+
+enum HTTPMethod: String {
+    case get = "GET"
+}
+
+enum Endpoint {
+    case fiestas
+    
+    var path: String {
+        let baseUrl = "http://localhost:8000"
+        switch self {
+        case .fiestas:
+            return "\(baseUrl)/fiestas.json"
         }
     }
 }
