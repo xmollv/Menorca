@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Timeline View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="C0y-PL-3fF">
             <objects>
-                <viewController storyboardIdentifier="TimelineViewController" id="s8x-np-800" customClass="TimelineViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsViewController" id="s8x-np-800" customClass="EventsViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XvX-TT-cap"/>
                         <viewControllerLayoutGuide type="bottom" id="jGf-mF-UK5"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimelineCell" rowHeight="77" id="fnh-8R-R1z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventsCell" rowHeight="77" id="fnh-8R-R1z" customClass="EventsCell" customModule="Menorca" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fnh-8R-R1z" id="wsY-19-Mv4">
@@ -101,6 +101,12 @@
                                                 <constraint firstItem="Wu1-2M-u5A" firstAttribute="centerY" secondItem="wsY-19-Mv4" secondAttribute="centerY" id="wUx-fw-Nla"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bottomVerticalLine" destination="TWQ-Fg-0zT" id="Azg-8D-C0m"/>
+                                            <outlet property="eventTitle" destination="Rsa-Ec-4wP" id="wAU-X2-wic"/>
+                                            <outlet property="startDate" destination="Wu1-2M-u5A" id="pBg-NA-nd3"/>
+                                            <outlet property="topVerticalLine" destination="nHO-4r-PRU" id="WEP-KD-Y3I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

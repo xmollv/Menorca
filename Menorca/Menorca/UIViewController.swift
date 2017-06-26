@@ -12,7 +12,7 @@ import UIKit
 enum Storyboard: String {
     case tabBar
     case fiestas
-    case timeline
+    case events
 }
 
 extension UIViewController {

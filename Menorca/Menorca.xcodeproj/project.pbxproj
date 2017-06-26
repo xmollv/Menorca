@@ -17,13 +17,15 @@
 		B185CD441EFEC45C000A2618 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD431EFEC45C000A2618 /* TabBarController.swift */; };
 		B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185CD451EFECA6C000A2618 /* UIColor.swift */; };
 		B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */; };
+		B1A470381F019DBE00724F2E /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A470371F019DBE00724F2E /* EventsCell.swift */; };
+		B1A4703A1F019EED00724F2E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A470391F019EED00724F2E /* Event.swift */; };
 		B1D9D5121F002558009B0A49 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5111F002558009B0A49 /* Webservice.swift */; };
 		B1D9D5141F002A21009B0A49 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5131F002A21009B0A49 /* DataProvider.swift */; };
 		B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5151F00309F009B0A49 /* Fiesta.swift */; };
 		B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */; };
 		B1D9D51A1F003D90009B0A49 /* FiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5191F003D90009B0A49 /* FiestasCell.swift */; };
-		B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */; };
-		B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */; };
+		B1E6E4FA1EFFEB6900B3550B /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* EventsViewController.swift */; };
+		B1E6E4FC1EFFEB8200B3550B /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Events.storyboard */; };
 		D9FCC5AF0C8ED4A5F5D4B19D /* Pods_Menorca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F93F58215FBF99E359D22A /* Pods_Menorca.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,13 +45,15 @@
 		B185CD431EFEC45C000A2618 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B185CD451EFECA6C000A2618 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1A470371F019DBE00724F2E /* EventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
+		B1A470391F019EED00724F2E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B1D9D5111F002558009B0A49 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		B1D9D5131F002A21009B0A49 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B1D9D5151F00309F009B0A49 /* Fiesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiesta.swift; sourceTree = "<group>"; };
 		B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		B1D9D5191F003D90009B0A49 /* FiestasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestasCell.swift; sourceTree = "<group>"; };
-		B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
+		B1E6E4F91EFFEB6900B3550B /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		B1E6E4FB1EFFEB8200B3550B /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D9D5151F00309F009B0A49 /* Fiesta.swift */,
+				B1A470391F019EED00724F2E /* Event.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -155,7 +160,7 @@
 				B185CD3B1EFEC1AF000A2618 /* FiestasViewController.swift */,
 				B1D9D5191F003D90009B0A49 /* FiestasCell.swift */,
 				B185CD3D1EFEC1C1000A2618 /* Fiestas.storyboard */,
-				B1E6E4F81EFFEB3B00B3550B /* TimelineViewController */,
+				B1E6E4F81EFFEB3B00B3550B /* EventsViewController */,
 			);
 			name = FiestasViewController;
 			sourceTree = "<group>";
@@ -178,13 +183,14 @@
 			name = "Data Provider";
 			sourceTree = "<group>";
 		};
-		B1E6E4F81EFFEB3B00B3550B /* TimelineViewController */ = {
+		B1E6E4F81EFFEB3B00B3550B /* EventsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B1E6E4F91EFFEB6900B3550B /* TimelineViewController.swift */,
-				B1E6E4FB1EFFEB8200B3550B /* Timeline.storyboard */,
+				B1E6E4F91EFFEB6900B3550B /* EventsViewController.swift */,
+				B1A470371F019DBE00724F2E /* EventsCell.swift */,
+				B1E6E4FB1EFFEB8200B3550B /* Events.storyboard */,
 			);
-			name = TimelineViewController;
+			name = EventsViewController;
 			sourceTree = "<group>";
 		};
 		E951576FCC0CD2D8518CB397 /* Pods */ = {
@@ -259,7 +265,7 @@
 			files = (
 				B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */,
 				B185CD3E1EFEC1C1000A2618 /* Fiestas.storyboard in Resources */,
-				B1E6E4FC1EFFEB8200B3550B /* Timeline.storyboard in Resources */,
+				B1E6E4FC1EFFEB8200B3550B /* Events.storyboard in Resources */,
 				B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */,
 				B149BC7C1EFEBC0300359005 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -327,10 +333,12 @@
 				B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */,
 				B149BC881EFEBE7F00359005 /* UIViewController.swift in Sources */,
 				B1424B761EFFC20E00D8209F /* GradientView.swift in Sources */,
-				B1E6E4FA1EFFEB6900B3550B /* TimelineViewController.swift in Sources */,
+				B1E6E4FA1EFFEB6900B3550B /* EventsViewController.swift in Sources */,
 				B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */,
 				B1424B731EFFC15400D8209F /* UIView.swift in Sources */,
+				B1A470381F019DBE00724F2E /* EventsCell.swift in Sources */,
 				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
+				B1A4703A1F019EED00724F2E /* Event.swift in Sources */,
 				B1D9D5121F002558009B0A49 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

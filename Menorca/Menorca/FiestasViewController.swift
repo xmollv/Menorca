@@ -69,7 +69,7 @@ extension FiestasViewController: UICollectionViewDataSource {
 
 extension FiestasViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let timelineViewController = TimelineViewController.instantiateFrom(.timeline)
+        let timelineViewController = EventsViewController.instantiateFrom(.events)
         navigationController?.pushViewController(timelineViewController, animated: true)
     }
 }

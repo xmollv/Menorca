@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class EventsViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     
@@ -21,12 +21,12 @@ class TimelineViewController: UIViewController {
 
 }
 
-extension TimelineViewController: UITableViewDataSource {
+extension EventsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "TimelineCell", for: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: "EventsCell", for: indexPath)
     }
 }
