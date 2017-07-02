@@ -70,7 +70,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="18c-hx-zxh">
-                                                            <rect key="frame" x="15" y="114" width="345" height="31"/>
+                                                            <rect key="frame" x="15" y="109" width="345" height="31"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sant Joan" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt2-4M-byN">
                                                                     <rect key="frame" x="0.0" y="3.5" width="250" height="24"/>
@@ -134,7 +134,7 @@
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" id="Hhr-3e-jai"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="leading" secondItem="weg-Lp-0ei" secondAttribute="leading" constant="10" id="MJN-Iz-4bZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="oMN-7n-aGo" secondAttribute="trailing" constant="10" id="VSJ-u7-MLC"/>
-                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="bottom" secondItem="18c-hx-zxh" secondAttribute="bottom" id="Xxn-rv-5h6"/>
+                                                        <constraint firstItem="mZm-lv-lO6" firstAttribute="bottom" secondItem="18c-hx-zxh" secondAttribute="bottom" constant="5" id="Xxn-rv-5h6"/>
                                                         <constraint firstItem="oMN-7n-aGo" firstAttribute="top" secondItem="weg-Lp-0ei" secondAttribute="top" constant="5" id="aLd-7p-W2P"/>
                                                         <constraint firstItem="mZm-lv-lO6" firstAttribute="leading" secondItem="oMN-7n-aGo" secondAttribute="leading" id="vvy-ZQ-VIR"/>
                                                     </constraints>
