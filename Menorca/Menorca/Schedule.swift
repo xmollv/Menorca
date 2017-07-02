@@ -9,8 +9,6 @@
 import Foundation
 
 struct Schedule: Codable {
-    
     let day: Date
     let events: [Event]
-    
 }

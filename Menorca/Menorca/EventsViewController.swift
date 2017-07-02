@@ -37,6 +37,15 @@ extension EventsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventsCell", for: indexPath) as! EventsCell
         let event = schedules[indexPath.section].events[indexPath.row]
         cell.configure(with: event)
+        // Remove the first and last vertical lines for the tableView cell
+        if schedules[indexPath.section].events.count == 1 {
+            cell.topVerticalLine.isHidden = true
+            cell.bottomVerticalLine.isHidden = true
+        } else if event == schedules[indexPath.section].events.first {
+            cell.topVerticalLine.isHidden = true
+        } else if event == schedules[indexPath.section].events.last {
+            cell.bottomVerticalLine.isHidden = true
+        }
         return cell
     }
 }

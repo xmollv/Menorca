@@ -42,7 +42,7 @@ class EventsCell: UITableViewCell {
     }
     
     func configure(with event: Event) {
-        startDate.text = dateFormatter.string(from: event.startDate)//event.startDate
+        startDate.text = dateFormatter.string(from: event.startDate)
         eventTitle.text = event.title
     }
 

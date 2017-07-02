@@ -9,8 +9,12 @@
 import Foundation
 
 struct Event: Codable {
-    
     let startDate: Date
     let title: String
-    
+}
+
+extension Event : Equatable {
+    static func ==(lhs: Event, rhs: Event) -> Bool {
+        return lhs.startDate == rhs.startDate
+    }
 }

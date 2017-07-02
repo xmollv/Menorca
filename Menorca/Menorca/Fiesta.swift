@@ -9,7 +9,6 @@
 import Foundation
 
 struct Fiesta: Codable {
-    
     let id: Int
     let name: String
     let location: String
@@ -17,5 +16,4 @@ struct Fiesta: Codable {
     let endDate: Date
     let headerImage: URL
     let schedules: [Schedule]
-
 }
