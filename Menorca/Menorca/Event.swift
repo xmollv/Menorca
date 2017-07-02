@@ -10,7 +10,7 @@ import Foundation
 
 struct Event: Codable {
     
-    let startDate: String
+    let startDate: Date
     let title: String
     
 }

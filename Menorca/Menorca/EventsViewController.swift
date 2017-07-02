@@ -12,6 +12,9 @@ class EventsViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     
+    var dataProvider: DataProvider!
+    var schedules: [Schedule]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -22,11 +25,18 @@ class EventsViewController: UIViewController {
 }
 
 extension EventsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return schedules.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return schedules[section].events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "EventsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventsCell", for: indexPath) as! EventsCell
+        let event = schedules[indexPath.section].events[indexPath.row]
+        cell.configure(with: event)
+        return cell
     }
 }

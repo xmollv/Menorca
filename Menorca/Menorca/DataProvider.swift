@@ -18,7 +18,9 @@ final class DataProvider {
             switch result {
             case .isSuccess(let data):
                 do {
-                    let results = try JSONDecoder().decode([T].self, from: data)
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategy = .iso8601
+                    let results = try jsonDecoder.decode([T].self, from: data)
                     DispatchQueue.main.async {
                         completion(Result.isSuccess(results))
                     }

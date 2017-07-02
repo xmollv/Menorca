@@ -10,7 +10,7 @@ import Foundation
 
 struct Schedule: Codable {
     
-    let day: String
+    let day: Date
     let events: [Event]
     
 }

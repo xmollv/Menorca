@@ -16,11 +16,6 @@ class FiestasCell: UICollectionViewCell {
     @IBOutlet private var fiestaLocation: UILabel!
     @IBOutlet private var fiestaDates: UILabel!
     
-    lazy var dateFormatterFromServer: ISO8601DateFormatter = {
-        let dateFormatter = ISO8601DateFormatter()
-        return dateFormatter
-    }()
-    
     lazy var dateIntervalFormatter: DateIntervalFormatter = {
         let dateIntervalFormatter = DateIntervalFormatter()
         dateIntervalFormatter.dateTemplate = "dd MMMM"
@@ -51,12 +46,7 @@ class FiestasCell: UICollectionViewCell {
         fiestaBackgroundImage.sd_setImage(with: URL(string: fiesta.headerImage))
         fiestaName.text = fiesta.name
         fiestaLocation.text = fiesta.location
-        
-        guard let startDate = dateFormatterFromServer.date(from: fiesta.startDate),
-            let endDate = dateFormatterFromServer.date(from: fiesta.endDate) else { return }
-        
-        let interval = dateIntervalFormatter.string(from: startDate, to: endDate)
-        fiestaDates.text = interval
+        fiestaDates.text = dateIntervalFormatter.string(from: fiesta.startDate, to: fiesta.endDate)
     }
     
 }

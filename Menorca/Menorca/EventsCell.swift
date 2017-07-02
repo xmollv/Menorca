@@ -15,6 +15,15 @@ class EventsCell: UITableViewCell {
     @IBOutlet var bottomVerticalLine: UIView!
     @IBOutlet private var eventTitle: UILabel!
     
+    lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.calendar = Calendar.current
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        return dateFormatter
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         clearCell()
@@ -26,14 +35,15 @@ class EventsCell: UITableViewCell {
     }
     
     private func clearCell() {
-        startDate.text = "08:00"
+        startDate.text = nil
         topVerticalLine.isHidden = false
         bottomVerticalLine.isHidden = false
-        eventTitle.text = "Primer toc de fabiol"
+        eventTitle.text = nil
     }
     
     func configure(with event: Event) {
-        
+        startDate.text = dateFormatter.string(from: event.startDate)//event.startDate
+        eventTitle.text = event.title
     }
 
 }
