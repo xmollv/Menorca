@@ -14,10 +14,19 @@ class EventsViewController: UIViewController {
     
     var dataProvider: DataProvider!
     var schedules: [Schedule]!
+    lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.calendar = Calendar.current
+        dateFormatter.locale = Locale.current
+        dateFormatter.timeZone = TimeZone.current
+        return dateFormatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -47,5 +56,22 @@ extension EventsViewController: UITableViewDataSource {
             cell.bottomVerticalLine.isHidden = true
         }
         return cell
+    }
+}
+
+extension EventsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = UIColor.purple
+        label.backgroundColor = UIColor.white.withAlphaComponent(0.95)
+        label.text = dateFormatter.string(from: schedules[section].day)
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 }
