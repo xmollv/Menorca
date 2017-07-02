@@ -43,7 +43,7 @@ class FiestasCell: UICollectionViewCell {
     }
     
     func configure(with fiesta: Fiesta) {
-        fiestaBackgroundImage.sd_setImage(with: URL(string: fiesta.headerImage))
+        fiestaBackgroundImage.sd_setImage(with: fiesta.headerImage)
         fiestaName.text = fiesta.name
         fiestaLocation.text = fiesta.location
         fiestaDates.text = dateIntervalFormatter.string(from: fiesta.startDate, to: fiesta.endDate)
