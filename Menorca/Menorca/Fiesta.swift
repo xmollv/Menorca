@@ -16,5 +16,6 @@ struct Fiesta: Codable {
     let startDate: String
     let endDate: String
     let headerImage: String
+    let schedule: [Schedule]
 
 }

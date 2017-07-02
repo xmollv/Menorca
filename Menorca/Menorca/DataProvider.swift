@@ -28,6 +28,7 @@ final class DataProvider {
                     }
                 } catch  {
                     DispatchQueue.main.async {
+                        dump(error)
                         completion(Result.isFailure(.malformedJson))
                     }
                 }

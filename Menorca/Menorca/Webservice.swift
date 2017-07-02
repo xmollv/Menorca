@@ -26,6 +26,7 @@ final class Webservice: NSObject {
         }
         
         var request = URLRequest(url: endpoint)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
         request.httpMethod = httpMethod.rawValue
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
