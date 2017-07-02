@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Fiesta: JSONInitiable {
+struct Fiesta: Codable {
     
     let id: Int
     let name: String
@@ -16,21 +16,5 @@ struct Fiesta: JSONInitiable {
     let startDate: String
     let endDate: String
     let headerImage: String
-    
-    init?(dict: JSONDictionary) {
-        
-        guard let id = dict["id"] as? Int,
-            let name = dict["name"] as? String,
-            let location = dict["location"] as? String,
-            let startDate = dict["startDate"] as? String,
-            let endDate = dict["endDate"] as? String,
-            let headerImage = dict["headerImage"] as? String else { return nil }
-        
-        self.id = id
-        self.name = name
-        self.location = location
-        self.startDate = startDate
-        self.endDate = endDate
-        self.headerImage = headerImage
-    }
+
 }

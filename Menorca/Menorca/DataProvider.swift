@@ -17,15 +17,21 @@ final class DataProvider {
     //MARK:- Private managers to access the network
     private let webservice = Webservice()
 
-    func requestMultiple<T: JSONInitiable>(_ httpMethod: HTTPMethod, _ endpoint: Endpoint, completion: @escaping CompletionType<[T]>) {
+    func requestMultiple<T: Codable>(_ httpMethod: HTTPMethod, _ endpoint: Endpoint, completion: @escaping CompletionType<[T]>) {
         webservice.request(httpMethod: httpMethod, endpoint: endpoint) { result in
             switch result {
-            case .isSuccess(let json):
-                guard let json = json as? JSONArray else { completion(Result.isFailure(.malformedJson)); return }
-                let results = json.flatMap{ T(dict: $0) }
-                DispatchQueue.main.async {
-                    completion(Result.isSuccess(results))
+            case .isSuccess(let data):
+                do {
+                    let results = try JSONDecoder().decode([T].self, from: data)
+                    DispatchQueue.main.async {
+                        completion(Result.isSuccess(results))
+                    }
+                } catch  {
+                    DispatchQueue.main.async {
+                        completion(Result.isFailure(.malformedJson))
+                    }
                 }
+                
             case .isFailure(let error):
                 DispatchQueue.main.async {
                     completion(Result.isFailure(error))

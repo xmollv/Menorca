@@ -75,17 +75,12 @@ final class Webservice: NSObject {
         }
     }
     
-    func request(httpMethod: HTTPMethod, endpoint: Endpoint, completion: @escaping CompletionType<Any>) {
+    func request(httpMethod: HTTPMethod, endpoint: Endpoint, completion: @escaping CompletionType<Data>) {
         load(url: endpoint.path, httpMethod: httpMethod) { networkResult in
             switch networkResult {
             case .isSuccess(let data):
                 guard let data = data, !data.isEmpty else { completion(Result.isFailure(.noData)); return }
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    completion(Result.isSuccess(json))
-                } catch {
-                    completion(Result.isFailure(.malformedJson))
-                }
+                completion(Result.isSuccess(data))
             case .isFailure(let error):
                 completion(Result.isFailure(error))
             }
