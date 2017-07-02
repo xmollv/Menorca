@@ -11,11 +11,13 @@ import SDWebImage
 
 class FiestasCell: UICollectionViewCell {
     
+    //MARK: IBOutlets
     @IBOutlet private var fiestaBackgroundImage: UIImageView!
     @IBOutlet private var fiestaName: UILabel!
     @IBOutlet private var fiestaLocation: UILabel!
     @IBOutlet private var fiestaDates: UILabel!
     
+    //MARK: Class properties
     lazy var dateIntervalFormatter: DateIntervalFormatter = {
         let dateIntervalFormatter = DateIntervalFormatter()
         dateIntervalFormatter.dateTemplate = "dd MMMM"
@@ -25,6 +27,7 @@ class FiestasCell: UICollectionViewCell {
         return dateIntervalFormatter
     }()
     
+    //MARK: View lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         clearCell()
@@ -35,6 +38,7 @@ class FiestasCell: UICollectionViewCell {
         clearCell()
     }
     
+    //MARK: Class methods
     private func clearCell() {
         fiestaBackgroundImage.image = nil
         fiestaName.text = nil

@@ -9,9 +9,11 @@
 import UIKit
 
 class EventsViewController: UIViewController {
-
+    
+    //MARK: IBOutlets
     @IBOutlet private var tableView: UITableView!
     
+    //MARK: Class properties
     var dataProvider: DataProvider!
     var schedules: [Schedule]!
     lazy var dateFormatter: DateFormatter = {
@@ -23,6 +25,7 @@ class EventsViewController: UIViewController {
         return dateFormatter
     }()
     
+    //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Schedule"
@@ -34,6 +37,7 @@ class EventsViewController: UIViewController {
 
 }
 
+//MARK: UITableViewDataSource
 extension EventsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return schedules.count
@@ -60,6 +64,7 @@ extension EventsViewController: UITableViewDataSource {
     }
 }
 
+//MARK: UITableViewDelegate
 extension EventsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()

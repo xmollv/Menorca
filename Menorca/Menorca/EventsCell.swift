@@ -9,12 +9,14 @@
 import UIKit
 
 class EventsCell: UITableViewCell {
-
+    
+    //MARK: IBOutlets
     @IBOutlet private var startDate: UILabel!
     @IBOutlet var topVerticalLine: UIView!
     @IBOutlet var bottomVerticalLine: UIView!
     @IBOutlet private var eventTitle: UILabel!
     
+    //MARK: Class properties
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -24,6 +26,7 @@ class EventsCell: UITableViewCell {
         return dateFormatter
     }()
     
+    //MARK: View lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         clearCell()
@@ -34,6 +37,7 @@ class EventsCell: UITableViewCell {
         clearCell()
     }
     
+    //MARK: Class methods
     private func clearCell() {
         startDate.text = nil
         topVerticalLine.isHidden = false

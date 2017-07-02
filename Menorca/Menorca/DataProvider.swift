@@ -12,7 +12,8 @@ final class DataProvider {
     
     //MARK:- Private managers to access the network
     private let webservice = Webservice()
-
+    
+    //MARK: Generic method to request data
     func request<T: Codable>(httpMethod: HTTPMethod = .get, _ endpoint: Endpoint, completion: @escaping CompletionType<T>) {
         webservice.request(httpMethod: httpMethod, endpoint: endpoint) { result in
             switch result {

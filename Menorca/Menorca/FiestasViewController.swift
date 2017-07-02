@@ -10,8 +10,10 @@ import UIKit
 
 class FiestasViewController: UIViewController {
     
+    //MARK: IBOutlets
     @IBOutlet private var collectionView: UICollectionView!
     
+    //MARK: Class properties
     var dataProvider: DataProvider!
     var fiestas: [Fiesta]?
     lazy var refreshControl: UIRefreshControl = {
@@ -21,6 +23,7 @@ class FiestasViewController: UIViewController {
         return refreshControl
     }()
     
+    //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -29,6 +32,7 @@ class FiestasViewController: UIViewController {
         fetchData()
     }
     
+    //MARK: Class methods
     @objc private func fetchData() {
         dataProvider.request(.fiestas) { [weak weakSelf = self] (result: Result<[Fiesta]>) in
             guard let weakSelf = weakSelf else { return }
@@ -44,6 +48,7 @@ class FiestasViewController: UIViewController {
     }
 }
 
+//MARK: UICollectionViewDataSource
 extension FiestasViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let numberOfFiestas = fiestas?.count else {
@@ -67,6 +72,7 @@ extension FiestasViewController: UICollectionViewDataSource {
     }
 }
 
+//MARK: UICollectionViewDelegate
 extension FiestasViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let timelineViewController = EventsViewController.instantiateFrom(.events)
@@ -76,6 +82,7 @@ extension FiestasViewController: UICollectionViewDelegate {
     }
 }
 
+//MARK: UICollectionViewDelegateFlowLayout
 extension FiestasViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 150)

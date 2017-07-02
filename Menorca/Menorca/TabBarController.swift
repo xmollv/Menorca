@@ -10,6 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    //MARK: Class properties
     var dataProvider: DataProvider!
     
     lazy var navigationFiestasController: UINavigationController = {
@@ -28,13 +29,12 @@ class TabBarController: UITabBarController {
         return navigationController
     }()
     
+    //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tabBar.barTintColor = .purple
         tabBar.isTranslucent = false
         tabBar.tintColor = .white
-        
         setViewControllers([navigationFiestasController], animated: true)
     }
 
