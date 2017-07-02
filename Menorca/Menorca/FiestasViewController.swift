@@ -30,16 +30,16 @@ class FiestasViewController: UIViewController {
     }
     
     @objc private func fetchData() {
-        dataProvider.requestMultiple(.get, .fiestas) { [weak weakSelf = self] (result: Result<[Fiesta]>) in
+        dataProvider.request(.fiestas) { [weak weakSelf = self] (result: Result<[Fiesta]>) in
             guard let weakSelf = weakSelf else { return }
             switch result {
             case .isSuccess(let fiestas):
                 weakSelf.fiestas = fiestas
-                weakSelf.refreshControl.endRefreshing()
                 weakSelf.collectionView.reloadData()
             case .isFailure(let error):
                 dump(error)
             }
+            weakSelf.refreshControl.endRefreshing()
         }
     }
 }
