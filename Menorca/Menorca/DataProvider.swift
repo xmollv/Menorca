@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol JSONInitiable {
-    init?(dict: JSONDictionary)
-}
-
 final class DataProvider {
     
     //MARK:- Private managers to access the network
