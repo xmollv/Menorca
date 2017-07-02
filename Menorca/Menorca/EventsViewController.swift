@@ -25,6 +25,7 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Schedule"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 60
