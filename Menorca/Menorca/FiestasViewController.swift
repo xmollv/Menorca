@@ -85,6 +85,6 @@ extension FiestasViewController: UICollectionViewDelegate {
 //MARK: UICollectionViewDelegateFlowLayout
 extension FiestasViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 150)
+        return CGSize(width: collectionView.bounds.width, height: 200)
     }
 }
