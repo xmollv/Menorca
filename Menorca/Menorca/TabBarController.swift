@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         let fiestasViewController = FiestasViewController.instantiateFrom(.fiestas)
         fiestasViewController.dataProvider = self.dataProvider
         fiestasViewController.tabBarItem.title = "Fiestas"
-        fiestasViewController.tabBarItem.image = UIImage(named:"horse")
+        fiestasViewController.tabBarItem.image = UIImage(named: "horse")
         fiestasViewController.title = "Fiestas"
         
         let navigationController = UINavigationController(rootViewController: fiestasViewController)
@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
         let beachesViewController = BeachesViewController.instantiateFrom(.beaches)
         beachesViewController.dataProvider = self.dataProvider
         beachesViewController.tabBarItem.title = "Beaches"
-        beachesViewController.tabBarItem.image = UIImage(named:"beach")
+        beachesViewController.tabBarItem.image = UIImage(named: "beach")
         beachesViewController.title = "Beaches"
         
         let navigationController = UINavigationController(rootViewController: beachesViewController)
@@ -45,13 +45,29 @@ class TabBarController: UITabBarController {
         return navigationController
     }()
     
+    lazy var camiDeCavallsController: UINavigationController = {
+        let camiDeCavallsViewController = CamiDeCavallsViewController.instantiateFrom(.camiDeCavalls)
+        camiDeCavallsViewController.dataProvider = self.dataProvider
+        camiDeCavallsViewController.tabBarItem.title = "Camí de Cavalls"
+        camiDeCavallsViewController.tabBarItem.image = UIImage(named: "trek")
+        camiDeCavallsViewController.title = "Camí de Cavalls"
+        
+        let navigationController = UINavigationController(rootViewController: camiDeCavallsViewController)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        
+        return navigationController
+    }()
+    
     //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.barTintColor = .purple
         tabBar.isTranslucent = false
+        tabBar.barTintColor = .purple
         tabBar.tintColor = .white
-        setViewControllers([navigationFiestasController, navigationBeachesController], animated: true)
+        setViewControllers([navigationFiestasController, navigationBeachesController, camiDeCavallsController], animated: false)
     }
 
 }

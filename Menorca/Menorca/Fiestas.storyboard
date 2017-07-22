@@ -37,7 +37,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weg-Lp-0ei">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SantJoan" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-7n-aGo">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-7n-aGo">
                                                             <rect key="frame" x="10" y="5" width="355" height="140"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -173,7 +173,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SantJoan" width="650" height="449"/>
         <image name="calendar" width="12" height="12"/>
         <image name="location" width="12" height="12"/>
     </resources>

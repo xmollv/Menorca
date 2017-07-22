@@ -14,6 +14,7 @@ enum Storyboard: String {
     case fiestas
     case events
     case beaches
+    case camiDeCavalls
 }
 
 extension UIViewController {

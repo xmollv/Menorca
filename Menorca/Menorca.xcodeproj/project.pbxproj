@@ -26,6 +26,8 @@
 		B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5151F00309F009B0A49 /* Fiesta.swift */; };
 		B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */; };
 		B1D9D51A1F003D90009B0A49 /* FiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5191F003D90009B0A49 /* FiestasCell.swift */; };
+		B1E586081F23F391005DB239 /* Camidecavalls.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E586071F23F391005DB239 /* Camidecavalls.storyboard */; };
+		B1E5860A1F23F39F005DB239 /* CamiDeCavallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E586091F23F39F005DB239 /* CamiDeCavallsViewController.swift */; };
 		B1E6E4FA1EFFEB6900B3550B /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6E4F91EFFEB6900B3550B /* EventsViewController.swift */; };
 		B1E6E4FC1EFFEB8200B3550B /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E6E4FB1EFFEB8200B3550B /* Events.storyboard */; };
 		B1E81E231F0908EC00789E71 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E81E221F0908EC00789E71 /* Schedule.swift */; };
@@ -57,6 +59,8 @@
 		B1D9D5151F00309F009B0A49 /* Fiesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fiesta.swift; sourceTree = "<group>"; };
 		B1D9D5171F003AAD009B0A49 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		B1D9D5191F003D90009B0A49 /* FiestasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestasCell.swift; sourceTree = "<group>"; };
+		B1E586071F23F391005DB239 /* Camidecavalls.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camidecavalls.storyboard; sourceTree = "<group>"; };
+		B1E586091F23F39F005DB239 /* CamiDeCavallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamiDeCavallsViewController.swift; sourceTree = "<group>"; };
 		B1E6E4F91EFFEB6900B3550B /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		B1E6E4FB1EFFEB8200B3550B /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		B1E81E221F0908EC00789E71 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				B185CD401EFEC40F000A2618 /* TabBarController */,
 				B185CD3F1EFEC3F4000A2618 /* FiestasViewController */,
 				B15C97D11F23E9F200F19986 /* BeachesViewController */,
+				B1E586051F23F35F005DB239 /* CamiDeCavallsViewController */,
+				B1E586061F23F36F005DB239 /* AboutViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +206,22 @@
 			name = "Data Provider";
 			sourceTree = "<group>";
 		};
+		B1E586051F23F35F005DB239 /* CamiDeCavallsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1E586071F23F391005DB239 /* Camidecavalls.storyboard */,
+				B1E586091F23F39F005DB239 /* CamiDeCavallsViewController.swift */,
+			);
+			name = CamiDeCavallsViewController;
+			sourceTree = "<group>";
+		};
+		B1E586061F23F36F005DB239 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AboutViewController;
+			sourceTree = "<group>";
+		};
 		B1E6E4F81EFFEB3B00B3550B /* EventsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15C97D31F23EA1200F19986 /* Beaches.storyboard in Resources */,
+				B1E586081F23F391005DB239 /* Camidecavalls.storyboard in Resources */,
 				B1D9D5181F003AAD009B0A49 /* Tabbar.storyboard in Resources */,
 				B185CD3E1EFEC1C1000A2618 /* Fiestas.storyboard in Resources */,
 				B1E6E4FC1EFFEB8200B3550B /* Events.storyboard in Resources */,
@@ -356,6 +379,7 @@
 				B1E6E4FA1EFFEB6900B3550B /* EventsViewController.swift in Sources */,
 				B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */,
 				B1424B731EFFC15400D8209F /* UIView.swift in Sources */,
+				B1E5860A1F23F39F005DB239 /* CamiDeCavallsViewController.swift in Sources */,
 				B1A470381F019DBE00724F2E /* EventsCell.swift in Sources */,
 				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
 				B1A4703A1F019EED00724F2E /* Event.swift in Sources */,
