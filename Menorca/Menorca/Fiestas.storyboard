@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +13,7 @@
         <scene sceneID="VLc-4e-kgm">
             <objects>
                 <viewController storyboardIdentifier="FiestasViewController" id="ozB-n2-qWD" customClass="FiestasViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mu4-aY-aiQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="epI-Rg-afX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jB9-hH-ArJ">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="jB9-hH-ArJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -159,11 +156,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="leading" secondItem="jB9-hH-ArJ" secondAttribute="leading" id="Qvb-Cl-xjY"/>
-                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="top" secondItem="mu4-aY-aiQ" secondAttribute="bottom" id="Zkv-Hw-hE1"/>
-                            <constraint firstAttribute="trailing" secondItem="l7Y-DD-Ypv" secondAttribute="trailing" id="c9X-o1-xr7"/>
-                            <constraint firstItem="epI-Rg-afX" firstAttribute="top" secondItem="l7Y-DD-Ypv" secondAttribute="bottom" id="ghM-1A-bum"/>
+                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="leading" secondItem="grE-e2-2lt" secondAttribute="leading" id="Qvb-Cl-xjY"/>
+                            <constraint firstItem="l7Y-DD-Ypv" firstAttribute="top" secondItem="grE-e2-2lt" secondAttribute="top" id="Zkv-Hw-hE1"/>
+                            <constraint firstItem="grE-e2-2lt" firstAttribute="trailing" secondItem="l7Y-DD-Ypv" secondAttribute="trailing" id="c9X-o1-xr7"/>
+                            <constraint firstItem="grE-e2-2lt" firstAttribute="bottom" secondItem="l7Y-DD-Ypv" secondAttribute="bottom" id="ghM-1A-bum"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="grE-e2-2lt"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="l7Y-DD-Ypv" id="tiQ-gA-CCq"/>

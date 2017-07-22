@@ -29,13 +29,29 @@ class TabBarController: UITabBarController {
         return navigationController
     }()
     
+    lazy var navigationBeachesController: UINavigationController = {
+        let beachesViewController = BeachesViewController.instantiateFrom(.beaches)
+        beachesViewController.dataProvider = self.dataProvider
+        beachesViewController.tabBarItem.title = "Beaches"
+        beachesViewController.tabBarItem.image = UIImage(named:"beach")
+        beachesViewController.title = "Beaches"
+        
+        let navigationController = UINavigationController(rootViewController: beachesViewController)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        
+        return navigationController
+    }()
+    
     //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.barTintColor = .purple
         tabBar.isTranslucent = false
         tabBar.tintColor = .white
-        setViewControllers([navigationFiestasController], animated: true)
+        setViewControllers([navigationFiestasController, navigationBeachesController], animated: true)
     }
 
 }

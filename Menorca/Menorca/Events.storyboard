@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,11 +14,7 @@
         <scene sceneID="C0y-PL-3fF">
             <objects>
                 <viewController storyboardIdentifier="EventsViewController" id="s8x-np-800" customClass="EventsViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XvX-TT-cap"/>
-                        <viewControllerLayoutGuide type="bottom" id="jGf-mF-UK5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w4t-6V-KPW">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="w4t-6V-KPW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -116,11 +113,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vTe-bO-nHc" firstAttribute="top" secondItem="XvX-TT-cap" secondAttribute="bottom" id="46E-2q-GWw"/>
-                            <constraint firstAttribute="trailing" secondItem="vTe-bO-nHc" secondAttribute="trailing" id="54r-l6-ezq"/>
-                            <constraint firstItem="jGf-mF-UK5" firstAttribute="top" secondItem="vTe-bO-nHc" secondAttribute="bottom" id="BWX-vj-bWQ"/>
-                            <constraint firstItem="vTe-bO-nHc" firstAttribute="leading" secondItem="w4t-6V-KPW" secondAttribute="leading" id="Eyd-gV-1fD"/>
+                            <constraint firstItem="vTe-bO-nHc" firstAttribute="top" secondItem="zeH-UG-wUv" secondAttribute="top" id="46E-2q-GWw"/>
+                            <constraint firstItem="zeH-UG-wUv" firstAttribute="trailing" secondItem="vTe-bO-nHc" secondAttribute="trailing" id="54r-l6-ezq"/>
+                            <constraint firstItem="zeH-UG-wUv" firstAttribute="bottom" secondItem="vTe-bO-nHc" secondAttribute="bottom" id="BWX-vj-bWQ"/>
+                            <constraint firstItem="vTe-bO-nHc" firstAttribute="leading" secondItem="zeH-UG-wUv" secondAttribute="leading" id="Eyd-gV-1fD"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zeH-UG-wUv"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="vTe-bO-nHc" id="K7L-5m-Lpy"/>
