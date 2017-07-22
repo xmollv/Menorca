@@ -114,7 +114,7 @@ enum Endpoint {
     case fiestas
     
     var path: String {
-        let baseUrl = "http://xmollv.io/Menorca"
+        let baseUrl = "http://localhost:8000/Menorca"
         switch self {
         case .fiestas:
             return "\(baseUrl)/fiestas.json"
