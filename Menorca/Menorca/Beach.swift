@@ -12,5 +12,5 @@ struct Beach: Codable {
     let name: String
     let latitude: String
     let longitude: String
-    let location: String
+    let belongsTo: String
 }
