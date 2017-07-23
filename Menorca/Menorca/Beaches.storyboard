@@ -37,8 +37,9 @@
                                                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHj-7f-D6l">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SantJoan" translatesAutoresizingMaskIntoConstraints="NO" id="thZ-Jh-sLI">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thZ-Jh-sLI">
                                                             <rect key="frame" x="10" y="5" width="355" height="140"/>
+                                                            <color key="backgroundColor" red="0.84700494999999998" green="0.84710079429999996" blue="0.84694981579999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="6"/>
@@ -98,7 +99,4 @@
             <point key="canvasLocation" x="405.60000000000002" y="-372.86356821589209"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="SantJoan" width="650" height="449"/>
-    </resources>
 </document>
