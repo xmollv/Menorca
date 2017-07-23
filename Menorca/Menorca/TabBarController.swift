@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         let fiestasViewController = FiestasViewController.instantiateFrom(.fiestas)
         fiestasViewController.dataProvider = self.dataProvider
         fiestasViewController.tabBarItem.title = "Fiestas"
-        fiestasViewController.tabBarItem.image = UIImage(named: "horse")
+        fiestasViewController.tabBarItem.image = #imageLiteral(resourceName: "horse")
         fiestasViewController.title = "Fiestas"
         
         let navigationController = UINavigationController(rootViewController: fiestasViewController)
@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
         let beachesViewController = BeachesViewController.instantiateFrom(.beaches)
         beachesViewController.dataProvider = self.dataProvider
         beachesViewController.tabBarItem.title = "Beaches"
-        beachesViewController.tabBarItem.image = UIImage(named: "beach")
+        beachesViewController.tabBarItem.image = #imageLiteral(resourceName: "beach")
         beachesViewController.title = "Beaches"
         
         let navigationController = UINavigationController(rootViewController: beachesViewController)
@@ -49,7 +49,7 @@ class TabBarController: UITabBarController {
         let camiDeCavallsViewController = CamiDeCavallsViewController.instantiateFrom(.camiDeCavalls)
         camiDeCavallsViewController.dataProvider = self.dataProvider
         camiDeCavallsViewController.tabBarItem.title = "Camí de Cavalls"
-        camiDeCavallsViewController.tabBarItem.image = UIImage(named: "trek")
+        camiDeCavallsViewController.tabBarItem.image = #imageLiteral(resourceName: "trek")
         camiDeCavallsViewController.title = "Camí de Cavalls"
         
         let navigationController = UINavigationController(rootViewController: camiDeCavallsViewController)
@@ -65,7 +65,7 @@ class TabBarController: UITabBarController {
         let aboutViewController = AboutViewController.instantiateFrom(.about)
         aboutViewController.dataProvider = self.dataProvider
         aboutViewController.tabBarItem.title = "About"
-        aboutViewController.tabBarItem.image = UIImage(named: "about")
+        aboutViewController.tabBarItem.image = #imageLiteral(resourceName: "about")
         aboutViewController.title = "About"
         
         let navigationController = UINavigationController(rootViewController: aboutViewController)
