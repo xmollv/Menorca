@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11C088B1F24CDDD00930277 /* Beach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C088A1F24CDDD00930277 /* Beach.swift */; };
 		B1424B731EFFC15400D8209F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1424B721EFFC15400D8209F /* UIView.swift */; };
 		B1424B761EFFC20E00D8209F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1424B751EFFC20E00D8209F /* GradientView.swift */; };
 		B149BC721EFEBC0300359005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BC711EFEBC0300359005 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		23589DFCB183291A5BE2670E /* Pods-Menorca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menorca.release.xcconfig"; path = "Pods/Target Support Files/Pods-Menorca/Pods-Menorca.release.xcconfig"; sourceTree = "<group>"; };
 		72F93F58215FBF99E359D22A /* Pods_Menorca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menorca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7004751079FCA4CC76D6393 /* Pods-Menorca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menorca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Menorca/Pods-Menorca.debug.xcconfig"; sourceTree = "<group>"; };
+		B11C088A1F24CDDD00930277 /* Beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
 		B1424B721EFFC15400D8209F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B1424B751EFFC20E00D8209F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B149BC6E1EFEBC0300359005 /* Menorca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menorca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B11C08881F24CDC600930277 /* Fiestas */ = {
+			isa = PBXGroup;
+			children = (
+				B1D9D5151F00309F009B0A49 /* Fiesta.swift */,
+				B1E81E221F0908EC00789E71 /* Schedule.swift */,
+				B1A470391F019EED00724F2E /* Event.swift */,
+			);
+			name = Fiestas;
+			sourceTree = "<group>";
+		};
+		B11C08891F24CDD000930277 /* Beaches */ = {
+			isa = PBXGroup;
+			children = (
+				B11C088A1F24CDDD00930277 /* Beach.swift */,
+			);
+			name = Beaches;
+			sourceTree = "<group>";
+		};
 		B1424B741EFFC1F900D8209F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +121,8 @@
 		B1424B771EFFC22200D8209F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B1D9D5151F00309F009B0A49 /* Fiesta.swift */,
-				B1E81E221F0908EC00789E71 /* Schedule.swift */,
-				B1A470391F019EED00724F2E /* Event.swift */,
+				B11C08881F24CDC600930277 /* Fiestas */,
+				B11C08891F24CDD000930277 /* Beaches */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,6 +410,7 @@
 				B1A470381F019DBE00724F2E /* EventsCell.swift in Sources */,
 				B185CD461EFECA6C000A2618 /* UIColor.swift in Sources */,
 				B1A4703A1F019EED00724F2E /* Event.swift in Sources */,
+				B11C088B1F24CDDD00930277 /* Beach.swift in Sources */,
 				B1D9D5121F002558009B0A49 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

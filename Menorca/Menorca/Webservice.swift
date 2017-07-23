@@ -112,12 +112,15 @@ enum HTTPMethod: String {
 
 enum Endpoint {
     case fiestas
+    case beaches
     
     var path: String {
         let baseUrl = "http://localhost:8000/Menorca"
         switch self {
         case .fiestas:
             return "\(baseUrl)/fiestas.json"
+        case .beaches:
+            return "\(baseUrl)/beaches.json"
         }
     }
 }

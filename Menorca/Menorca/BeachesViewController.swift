@@ -16,6 +16,10 @@ class BeachesViewController: UIViewController {
     //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataProvider.request(.beaches) { (result: Result<[Beach]>) in
+            dump(result)
+        }
     }
 
 }
