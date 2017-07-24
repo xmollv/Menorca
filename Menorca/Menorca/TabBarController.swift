@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = .purple
         navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return navigationController
     }()
@@ -40,7 +40,7 @@ class TabBarController: UITabBarController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = .purple
         navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return navigationController
     }()
@@ -56,7 +56,7 @@ class TabBarController: UITabBarController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = .purple
         navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return navigationController
     }()
@@ -72,7 +72,7 @@ class TabBarController: UITabBarController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = .purple
         navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return navigationController
     }()
