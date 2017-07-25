@@ -80,13 +80,42 @@ class TabBarController: UITabBarController {
     //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.isTranslucent = false
-        tabBar.barTintColor = .purple
-        tabBar.tintColor = .white
-        setViewControllers([navigationFiestasController,
+        self.delegate = self
+        self.tabBar.isTranslucent = false
+        self.tabBar.barTintColor = .purple
+        self.tabBar.tintColor = .white
+        self.setViewControllers([navigationFiestasController,
                             navigationBeachesController,
                             navigationCamiDeCavallsController,
                             navigationAboutController], animated: false)
     }
+}
 
+extension TabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let viewToBetransformed: UIView
+        
+        if viewController == navigationFiestasController {
+            viewToBetransformed = self.tabBar.subviews[1]
+        } else if viewController == navigationBeachesController {
+            viewToBetransformed = self.tabBar.subviews[2]
+        } else if viewController == navigationCamiDeCavallsController {
+            viewToBetransformed = self.tabBar.subviews[3]
+        } else if viewController == navigationAboutController {
+            viewToBetransformed = self.tabBar.subviews[4]
+        } else {
+            return
+        }
+        
+        viewToBetransformed.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+        UIView.animate(withDuration: 0.25,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 10,
+                       options: [],
+                       animations: {
+                        viewToBetransformed.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }, completion: nil)
+
+    }
 }
