@@ -44,6 +44,7 @@
 		A7004751079FCA4CC76D6393 /* Pods-Menorca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menorca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Menorca/Pods-Menorca.debug.xcconfig"; sourceTree = "<group>"; };
 		B11C088A1F24CDDD00930277 /* Beach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beach.swift; sourceTree = "<group>"; };
 		B11C088C1F24E08C00930277 /* BeachCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachCell.swift; sourceTree = "<group>"; };
+		B12896431F27CFF80082706C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B1424B721EFFC15400D8209F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B1424B751EFFC20E00D8209F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B149BC6E1EFEBC0300359005 /* Menorca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menorca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +179,7 @@
 				B149BC861EFEBE6100359005 /* UIKit Extensions */,
 				B149BC7A1EFEBC0300359005 /* LaunchScreen.storyboard */,
 				B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */,
+				B12896431F27CFF80082706C /* Colors.xcassets */,
 				B149BC7D1EFEBC0300359005 /* Info.plist */,
 			);
 			name = Extra;
