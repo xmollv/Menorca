@@ -28,7 +28,18 @@ class FiestasViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.refreshControl = refreshControl
+        collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
         fetchData()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     //MARK: Class methods
@@ -83,6 +94,24 @@ extension FiestasViewController: UICollectionViewDelegate {
 //MARK: UICollectionViewDelegateFlowLayout
 extension FiestasViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 200)
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            fatalError("The layout for the collection view was not a UICollectionViewFlowLayout")
+        }
+        
+        // The number of cells changes based on the device orientation
+        var cellsForRow: CGFloat = 1.0
+        if collectionView.bounds.size.width > collectionView.bounds.size.height {
+            cellsForRow = 2.0
+        }
+        
+        let cellSpacing = flowLayout.minimumInteritemSpacing
+        let collectionViewInsetsWidth = collectionView.contentInset.left + collectionView.contentInset.right
+        
+        let collectionViewWidthMinusInsets = collectionView.bounds.size.width - collectionViewInsetsWidth
+        let collectionViewWidthMinusCellSpacing = collectionViewWidthMinusInsets - (cellSpacing * (cellsForRow - 1))
+        let widthCell = collectionViewWidthMinusCellSpacing / cellsForRow
+        
+        let sizeToReturn = CGSize(width: widthCell, height: widthCell*(2/3))
+        return sizeToReturn
     }
 }
