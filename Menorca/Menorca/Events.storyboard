@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +15,7 @@
         <scene sceneID="C0y-PL-3fF">
             <objects>
                 <viewController storyboardIdentifier="EventsViewController" id="s8x-np-800" customClass="EventsViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="w4t-6V-KPW">
+                    <view key="view" contentMode="scaleToFill" id="w4t-6V-KPW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -43,14 +44,14 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nHO-4r-PRU">
                                                             <rect key="frame" x="4.5" y="-0.5" width="1" height="38.5"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" name="Primary"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="unV-FO-N28"/>
                                                             </constraints>
                                                         </view>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="3OQ-aY-PH8">
                                                             <rect key="frame" x="0.0" y="33.5" width="10" height="10"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" name="Primary"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="10" id="VTa-gb-aSh"/>
                                                                 <constraint firstAttribute="height" constant="10" id="l7k-Os-GT7"/>
@@ -63,7 +64,7 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Fg-0zT">
                                                             <rect key="frame" x="4.5" y="38.5" width="1" height="38.5"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" name="Primary"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="P4F-QV-NuH"/>
                                                             </constraints>
@@ -129,4 +130,9 @@
             <point key="canvasLocation" x="378.75" y="-182.74647887323943"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.58823531866073608" green="0.078431375324726105" blue="0.19607843458652496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
