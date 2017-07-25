@@ -23,6 +23,7 @@
 		B18A30111EFFD5CB00A36DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18A30101EFFD4BC00A36DE5 /* Assets.xcassets */; };
 		B1A470381F019DBE00724F2E /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A470371F019DBE00724F2E /* EventsCell.swift */; };
 		B1A4703A1F019EED00724F2E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A470391F019EED00724F2E /* Event.swift */; };
+		B1A67D201F27E0800055C0C2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12896431F27CFF80082706C /* Colors.xcassets */; };
 		B1D9D5121F002558009B0A49 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5111F002558009B0A49 /* Webservice.swift */; };
 		B1D9D5141F002A21009B0A49 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5131F002A21009B0A49 /* DataProvider.swift */; };
 		B1D9D5161F00309F009B0A49 /* Fiesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D9D5151F00309F009B0A49 /* Fiesta.swift */; };
@@ -332,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A67D201F27E0800055C0C2 /* Colors.xcassets in Resources */,
 				B15C97D31F23EA1200F19986 /* Beaches.storyboard in Resources */,
 				B1E586081F23F391005DB239 /* Camidecavalls.storyboard in Resources */,
 				B1E5860D1F23F605005DB239 /* About.storyboard in Resources */,
