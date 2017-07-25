@@ -18,7 +18,6 @@ class BeachesViewController: UIViewController {
     var beaches: [Beach]?
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .purple
         refreshControl.addTarget(self, action: #selector(self.fetchData), for: UIControlEvents.valueChanged)
         return refreshControl
     }()
@@ -54,7 +53,6 @@ extension BeachesViewController: UICollectionViewDataSource {
         guard let numberOfBeaches = beaches?.count else {
             let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
             activityIndicator.startAnimating()
-            activityIndicator.color = .purple
             collectionView.backgroundView = activityIndicator
             return 0
         }

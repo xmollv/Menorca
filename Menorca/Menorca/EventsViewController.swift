@@ -71,7 +71,7 @@ extension EventsViewController: UITableViewDelegate {
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = UIColor.purple
+        label.textColor = .primary
         label.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         label.text = dateFormatter.string(from: schedules[section].day)
         return label

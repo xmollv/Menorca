@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         
         let navigationController = UINavigationController(rootViewController: fiestasViewController)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.barTintColor = .primary
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
@@ -38,7 +38,7 @@ class TabBarController: UITabBarController {
         
         let navigationController = UINavigationController(rootViewController: beachesViewController)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.barTintColor = .primary
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
@@ -54,7 +54,7 @@ class TabBarController: UITabBarController {
         
         let navigationController = UINavigationController(rootViewController: camiDeCavallsViewController)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.barTintColor = .primary
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
@@ -70,7 +70,7 @@ class TabBarController: UITabBarController {
         
         let navigationController = UINavigationController(rootViewController: aboutViewController)
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = .purple
+        navigationController.navigationBar.barTintColor = .primary
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
@@ -82,8 +82,6 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         self.delegate = self
         self.tabBar.isTranslucent = false
-        self.tabBar.barTintColor = .purple
-        self.tabBar.tintColor = .white
         self.setViewControllers([navigationFiestasController,
                             navigationBeachesController,
                             navigationCamiDeCavallsController,
@@ -116,6 +114,5 @@ extension TabBarController: UITabBarControllerDelegate {
                        animations: {
                         viewToBetransformed.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }, completion: nil)
-
     }
 }

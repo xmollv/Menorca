@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    class var purple: UIColor { return UIColor(red: 150/255, green: 20/255, blue: 50/255, alpha: 1) }
+    class var primary: UIColor { return UIColor(named: "Primary")! }
 }
