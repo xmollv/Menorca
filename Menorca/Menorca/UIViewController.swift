@@ -14,7 +14,6 @@ enum Storyboard: String {
     case fiestas
     case events
     case beaches
-    case camiDeCavalls
     case about
 }
 

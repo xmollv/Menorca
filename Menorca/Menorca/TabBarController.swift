@@ -45,22 +45,6 @@ class TabBarController: UITabBarController {
         return navigationController
     }()
     
-    lazy var navigationCamiDeCavallsController: UINavigationController = {
-        let camiDeCavallsViewController = CamiDeCavallsViewController.instantiateFrom(.camiDeCavalls)
-        camiDeCavallsViewController.dataProvider = self.dataProvider
-        camiDeCavallsViewController.tabBarItem.title = "Camí de Cavalls"
-        camiDeCavallsViewController.tabBarItem.image = #imageLiteral(resourceName: "trek")
-        camiDeCavallsViewController.title = "Camí de Cavalls"
-        
-        let navigationController = UINavigationController(rootViewController: camiDeCavallsViewController)
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.barTintColor = .primary
-        navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
-        return navigationController
-    }()
-    
     lazy var navigationAboutController: UINavigationController = {
         let aboutViewController = AboutViewController.instantiateFrom(.about)
         aboutViewController.dataProvider = self.dataProvider
@@ -84,7 +68,6 @@ class TabBarController: UITabBarController {
         self.tabBar.isTranslucent = false
         self.setViewControllers([navigationFiestasController,
                             navigationBeachesController,
-                            navigationCamiDeCavallsController,
                             navigationAboutController], animated: false)
     }
 }
@@ -97,10 +80,8 @@ extension TabBarController: UITabBarControllerDelegate {
             viewToBetransformed = self.tabBar.subviews[1]
         } else if viewController == navigationBeachesController {
             viewToBetransformed = self.tabBar.subviews[2]
-        } else if viewController == navigationCamiDeCavallsController {
-            viewToBetransformed = self.tabBar.subviews[3]
         } else if viewController == navigationAboutController {
-            viewToBetransformed = self.tabBar.subviews[4]
+            viewToBetransformed = self.tabBar.subviews[3]
         } else {
             return
         }

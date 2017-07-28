@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class BeachesViewController: UIViewController {
 
@@ -15,12 +16,24 @@ class BeachesViewController: UIViewController {
     
     //MARK: Class properties
     var dataProvider: DataProvider!
-    var beaches: [Beach]?
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(self.fetchData), for: UIControlEvents.valueChanged)
         return refreshControl
     }()
+    var beaches: [Beach]?
+    var locationManager: CLLocationManager?
+    var currentLocation: CLLocation? = nil {
+        didSet {
+            guard let currentLocation = currentLocation, let _ = beaches else { return }
+            beaches?.sort(by: { (beach1, beach2) -> Bool in
+                let beach1Distance = currentLocation.distance(from: beach1.location)
+                let beach2Distance = currentLocation.distance(from: beach2.location)
+                return beach1Distance < beach2Distance
+            })
+            collectionView.reloadData()
+        }
+    }
     
     //MARK: View controller lifecycle
     override func viewDidLoad() {
@@ -29,7 +42,13 @@ class BeachesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.refreshControl = refreshControl
         collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
-        fetchData()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+            locationManager!.delegate = self
+            locationManager!.requestWhenInUseAuthorization()
+            locationManager!.startUpdatingLocation()
+            fetchData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +73,7 @@ class BeachesViewController: UIViewController {
             switch result {
             case .isSuccess(let beaches):
                 weakSelf.beaches = beaches
-                weakSelf.collectionView.reloadData()
+                weakSelf.locationManager?.requestLocation()
             case .isFailure(let error):
                 dump(error)
             }
@@ -66,13 +85,7 @@ class BeachesViewController: UIViewController {
 //MARK: UICollectionViewDataSource
 extension BeachesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let numberOfBeaches = beaches?.count else {
-            let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-            activityIndicator.startAnimating()
-            collectionView.backgroundView = activityIndicator
-            return 0
-        }
-        
+        guard let numberOfBeaches = beaches?.count else { return 0 }
         collectionView.backgroundView = nil
         return numberOfBeaches
     }
@@ -81,7 +94,7 @@ extension BeachesViewController: UICollectionViewDataSource {
         guard let beaches = beaches else { return UICollectionViewCell() }
         let beach = beaches[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeachCell", for: indexPath) as! BeachCell
-        cell.configure(with: beach)
+        cell.configure(with: beach, currentLocation: currentLocation)
         return cell
     }
 }
@@ -112,5 +125,23 @@ extension BeachesViewController: UICollectionViewDelegateFlowLayout {
         
         let sizeToReturn = CGSize(width: widthCell, height: 150)
         return sizeToReturn
+    }
+}
+
+extension BeachesViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let latestLocation = locations.last {
+            currentLocation = latestLocation
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        //FIXME: Change this to something more friendly with a button to settings
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = error.localizedDescription
+        collectionView.backgroundView = label
     }
 }

@@ -14,7 +14,7 @@ struct Beach: Codable {
     let belongsTo: String
     let latitude: Double
     let longitude: Double
-    let location: CLLocationCoordinate2D
+    let location: CLLocation
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -29,7 +29,7 @@ struct Beach: Codable {
         belongsTo = try container.decode(String.self, forKey: .belongsTo)
         latitude = try container.decode(Double.self, forKey: .latitude)
         longitude = try container.decode(Double.self, forKey: .longitude)
-        location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        location = CLLocation(latitude: latitude, longitude: longitude)
     }
     
     func encode(to encoder: Encoder) throws {

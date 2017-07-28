@@ -8,11 +8,21 @@
 
 import Foundation
 import UIKit
+import CoreLocation
+import MapKit
 
 class BeachCell: UICollectionViewCell {
     
     //MARK: IBOutlets
     @IBOutlet private var beachName: UILabel!
+    @IBOutlet private var beachDistance: UILabel!
+    
+    //MARK: Class properties
+    lazy var distanceFormatter: MKDistanceFormatter = {
+        let distanceFormatter = MKDistanceFormatter()
+        distanceFormatter.unitStyle = .default
+        return distanceFormatter
+    }()
     
     //MARK: View lifecycle
     override func awakeFromNib() {
@@ -28,10 +38,19 @@ class BeachCell: UICollectionViewCell {
     //MARK: Class methods
     private func clearCell() {
         beachName.text = nil
+        beachDistance.text = nil
     }
     
-    func configure(with beach: Beach) {
+    func configure(with beach: Beach, currentLocation: CLLocation?) {
         beachName.text = beach.name
+        beachDistance.text = distanceBetween(beach.location, and: currentLocation)
+    }
+    
+    private func distanceBetween(_ beachLocation: CLLocation, and userLocation: CLLocation?) -> String? {
+        guard let userLocation = userLocation else { return nil }
+        let distanceInMeters = beachLocation.distance(from: userLocation)
+        let prettyString = distanceFormatter.string(fromDistance: distanceInMeters)
+        return prettyString
     }
     
 }

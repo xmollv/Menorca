@@ -46,23 +46,35 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test for the text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-KH-2sZ">
-                                                            <rect key="frame" x="10" y="10" width="355" height="130"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-MU-dPj">
+                                                            <rect key="frame" x="0.0" y="45.5" width="375" height="59"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Test for the text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-KH-2sZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOf-G9-phB">
+                                                                    <rect key="frame" x="0.0" y="38.5" width="375" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="thZ-Jh-sLI" firstAttribute="leading" secondItem="CHj-7f-D6l" secondAttribute="leading" id="9FD-JB-3pE"/>
-                                                        <constraint firstItem="bbf-KH-2sZ" firstAttribute="top" secondItem="thZ-Jh-sLI" secondAttribute="top" constant="10" id="CRr-cT-W2V"/>
+                                                        <constraint firstItem="M0t-MU-dPj" firstAttribute="leading" secondItem="thZ-Jh-sLI" secondAttribute="leading" id="9pj-AX-ZSB"/>
                                                         <constraint firstAttribute="trailing" secondItem="thZ-Jh-sLI" secondAttribute="trailing" id="Dom-YI-OP5"/>
                                                         <constraint firstAttribute="bottom" secondItem="thZ-Jh-sLI" secondAttribute="bottom" id="ELu-Du-fP6"/>
-                                                        <constraint firstItem="thZ-Jh-sLI" firstAttribute="bottom" secondItem="bbf-KH-2sZ" secondAttribute="bottom" constant="10" id="QsM-WK-oNL"/>
-                                                        <constraint firstItem="thZ-Jh-sLI" firstAttribute="trailing" secondItem="bbf-KH-2sZ" secondAttribute="trailing" constant="10" id="Wmv-y2-zkL"/>
+                                                        <constraint firstItem="M0t-MU-dPj" firstAttribute="trailing" secondItem="thZ-Jh-sLI" secondAttribute="trailing" id="Kwm-oA-1HM"/>
+                                                        <constraint firstItem="thZ-Jh-sLI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="M0t-MU-dPj" secondAttribute="bottom" constant="10" id="MM7-Xx-dCL"/>
+                                                        <constraint firstItem="M0t-MU-dPj" firstAttribute="centerY" secondItem="thZ-Jh-sLI" secondAttribute="centerY" id="X5X-ns-QDp"/>
                                                         <constraint firstItem="thZ-Jh-sLI" firstAttribute="top" secondItem="CHj-7f-D6l" secondAttribute="top" id="bTi-rX-Ou5"/>
-                                                        <constraint firstItem="bbf-KH-2sZ" firstAttribute="leading" secondItem="thZ-Jh-sLI" secondAttribute="leading" constant="10" id="tiy-3F-bBb"/>
+                                                        <constraint firstItem="M0t-MU-dPj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="thZ-Jh-sLI" secondAttribute="top" constant="10" id="d6w-xs-K3o"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -75,6 +87,7 @@
                                         </constraints>
                                         <size key="customSize" width="375" height="150"/>
                                         <connections>
+                                            <outlet property="beachDistance" destination="VOf-G9-phB" id="fag-ql-bMQ"/>
                                             <outlet property="beachName" destination="bbf-KH-2sZ" id="5GM-D7-CPA"/>
                                         </connections>
                                     </collectionViewCell>
