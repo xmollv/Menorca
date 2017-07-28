@@ -129,6 +129,18 @@ extension BeachesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension BeachesViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .denied, .restricted:
+            //FIXME: Change this to something more friendly with a button to settings
+            beaches = nil
+            collectionView.reloadData()
+            createErrorMessageOnCollectionView(nil)
+        default:
+            break
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let latestLocation = locations.last {
             currentLocation = latestLocation
@@ -137,11 +149,15 @@ extension BeachesViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         //FIXME: Change this to something more friendly with a button to settings
+        createErrorMessageOnCollectionView(error)
+    }
+    
+    private func createErrorMessageOnCollectionView(_ error: Error?) {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = error.localizedDescription
+        label.text = error?.localizedDescription
         collectionView.backgroundView = label
     }
 }
