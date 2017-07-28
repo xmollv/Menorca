@@ -16,11 +16,6 @@ class BeachesViewController: UIViewController {
     
     //MARK: Class properties
     var dataProvider: DataProvider!
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(self.fetchData), for: UIControlEvents.valueChanged)
-        return refreshControl
-    }()
     var beaches: [Beach]?
     var locationManager: CLLocationManager?
     var currentLocation: CLLocation? = nil {
@@ -38,16 +33,14 @@ class BeachesViewController: UIViewController {
     //MARK: View controller lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.refreshControl = refreshControl
-        collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
         if CLLocationManager.locationServicesEnabled() {
+            collectionView.dataSource = self
+            collectionView.delegate = self
+            collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
             locationManager = CLLocationManager()
             locationManager!.delegate = self
             locationManager!.requestWhenInUseAuthorization()
             locationManager!.startUpdatingLocation()
-            fetchData()
         }
     }
     
@@ -73,11 +66,9 @@ class BeachesViewController: UIViewController {
             switch result {
             case .isSuccess(let beaches):
                 weakSelf.beaches = beaches
-                weakSelf.locationManager?.requestLocation()
             case .isFailure(let error):
                 dump(error)
             }
-            weakSelf.refreshControl.endRefreshing()
         }
     }
 }
@@ -136,6 +127,8 @@ extension BeachesViewController: CLLocationManagerDelegate {
             beaches = nil
             collectionView.reloadData()
             createErrorMessageOnCollectionView(nil)
+        case .authorizedAlways, .authorizedWhenInUse:
+            fetchData()
         default:
             break
         }
