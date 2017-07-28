@@ -98,6 +98,14 @@ extension BeachesViewController: UICollectionViewDataSource {
 
 //MARK: UICollectionViewDelegate
 extension BeachesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let beaches = beaches else { return }
+        let beach = beaches[indexPath.row]
+        let url = URL(string: "http://maps.apple.com/maps?address=\(beach.location.coordinate.latitude),\(beach.location.coordinate.longitude)")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
 
 //MARK: UICollectionViewDelegateFlowLayout
