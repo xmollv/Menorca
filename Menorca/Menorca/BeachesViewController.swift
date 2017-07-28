@@ -46,7 +46,13 @@ class BeachesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        locationManager?.startUpdatingLocation()
         collectionView?.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        locationManager?.stopUpdatingLocation()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -137,6 +143,7 @@ extension BeachesViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let latestLocation = locations.last {
             currentLocation = latestLocation
+            print("New location recieved: \(latestLocation)")
         }
     }
     
