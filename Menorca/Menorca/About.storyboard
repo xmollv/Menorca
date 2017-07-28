@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,16 +14,112 @@
         <scene sceneID="O7M-pS-l28">
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" id="BGv-Xg-8wv" customClass="AboutViewController" customModule="Menorca" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="3zx-Qa-m7S">
+                    <view key="view" contentMode="scaleToFill" id="3zx-Qa-m7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e22-AC-ZXL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-Mi-7s5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="248.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-ZR-dGJ">
+                                                <rect key="frame" x="20" y="10" width="375" height="228.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEj-bE-Jjw">
+                                                        <rect key="frame" x="167.5" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" name="Xavi_Yellow"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="pVK-2y-LE5"/>
+                                                            <constraint firstAttribute="height" constant="100" id="sk4-Mv-b5A"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description about the app http://xmollv.io" translatesAutoresizingMaskIntoConstraints="NO" id="nhA-7f-snM">
+                                                        <rect key="frame" x="0.0" y="110" width="375" height="36.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-Nu-QKx">
+                                                        <rect key="frame" x="167.5" y="156.5" width="139" height="31"/>
+                                                        <color key="backgroundColor" name="Xavi_Red"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                                        <state key="normal" title="Buy me a coffe">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz2-zs-fO0">
+                                                        <rect key="frame" x="167.5" y="197.5" width="199" height="31"/>
+                                                        <color key="backgroundColor" name="Beach_Ternary_Green"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                                        <state key="normal" title="Something is missing?">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="6fk-ZR-dGJ" firstAttribute="leading" secondItem="Bze-Mi-7s5" secondAttribute="leading" constant="20" id="R7S-JB-7Z8"/>
+                                            <constraint firstItem="6fk-ZR-dGJ" firstAttribute="top" secondItem="Bze-Mi-7s5" secondAttribute="top" constant="10" id="eIQ-yX-kQi"/>
+                                            <constraint firstAttribute="trailing" secondItem="6fk-ZR-dGJ" secondAttribute="trailing" constant="20" id="eay-ef-zfX"/>
+                                            <constraint firstAttribute="bottom" secondItem="6fk-ZR-dGJ" secondAttribute="bottom" constant="10" id="oKj-dg-P5s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Bze-Mi-7s5" secondAttribute="bottom" id="2DQ-vF-pgi"/>
+                                    <constraint firstItem="Bze-Mi-7s5" firstAttribute="top" secondItem="e22-AC-ZXL" secondAttribute="top" id="M07-h3-zxB"/>
+                                    <constraint firstItem="Bze-Mi-7s5" firstAttribute="leading" secondItem="e22-AC-ZXL" secondAttribute="leading" id="bSX-vG-sUZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bze-Mi-7s5" secondAttribute="trailing" id="lAm-yo-m56"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e22-AC-ZXL" firstAttribute="top" secondItem="jXg-b5-4rX" secondAttribute="top" id="FAE-Cc-LeX"/>
+                            <constraint firstItem="jXg-b5-4rX" firstAttribute="trailing" secondItem="e22-AC-ZXL" secondAttribute="trailing" id="WIM-dv-G0o"/>
+                            <constraint firstItem="jXg-b5-4rX" firstAttribute="bottom" secondItem="e22-AC-ZXL" secondAttribute="bottom" id="YSo-ce-LZp"/>
+                            <constraint firstItem="e22-AC-ZXL" firstAttribute="leading" secondItem="jXg-b5-4rX" secondAttribute="leading" id="aIl-9A-Gzs"/>
+                            <constraint firstItem="Bze-Mi-7s5" firstAttribute="width" secondItem="3zx-Qa-m7S" secondAttribute="width" id="gMv-iP-bVQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jXg-b5-4rX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVZ-kd-LQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="-94"/>
+            <point key="canvasLocation" x="504.80000000000001" y="-94.002998500749626"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Beach_Ternary_Green">
+            <color red="0.66666668653488159" green="0.84705883264541626" blue="0.69019609689712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Xavi_Red">
+            <color red="1" green="0.60000002384185791" blue="0.50980395078659058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Xavi_Yellow">
+            <color red="1" green="0.84313726425170898" blue="0.50980395078659058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
