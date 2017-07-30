@@ -47,16 +47,16 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-MU-dPj">
-                                                            <rect key="frame" x="0.0" y="45.5" width="375" height="59"/>
+                                                            <rect key="frame" x="0.0" y="41" width="375" height="68.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Test for the text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-KH-2sZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOf-G9-phB">
-                                                                    <rect key="frame" x="0.0" y="38.5" width="375" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="48" width="375" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
