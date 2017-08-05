@@ -17,7 +17,10 @@ class BeachesViewController: UIViewController {
     //MARK: Class properties
     var dataProvider: DataProvider!
     var beaches: [Beach]?
+    var filteredBeaches: [Beach] = []
+    var isSearching = false
     var locationManager: CLLocationManager?
+    let searchController = UISearchController(searchResultsController: nil)
     var currentLocation: CLLocation? = nil {
         didSet {
             guard let currentLocation = currentLocation, let _ = beaches else { return }
@@ -41,6 +44,14 @@ class BeachesViewController: UIViewController {
             locationManager!.delegate = self
             locationManager!.requestWhenInUseAuthorization()
             locationManager!.startUpdatingLocation()
+            searchController.searchResultsUpdater = self
+            searchController.dimsBackgroundDuringPresentation = false
+            definesPresentationContext = true
+            navigationItem.searchController = searchController
+            navigationItem.searchController?.searchBar.delegate = self
+            navigationItem.searchController?.searchBar.tintColor = .white
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
     }
     
@@ -83,14 +94,24 @@ class BeachesViewController: UIViewController {
 //MARK: UICollectionViewDataSource
 extension BeachesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let numberOfBeaches = beaches?.count else { return 0 }
-        collectionView.backgroundView = nil
-        return numberOfBeaches
+        if !isSearching {
+            guard let numberOfBeaches = beaches?.count else { return 0 }
+            collectionView.backgroundView = nil
+            return numberOfBeaches
+        } else {
+            collectionView.backgroundView = nil
+            return filteredBeaches.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let beaches = beaches else { return UICollectionViewCell() }
-        let beach = beaches[indexPath.row]
+        var beach: Beach
+        if !isSearching {
+            beach = beaches[indexPath.row]
+        } else {
+            beach = filteredBeaches[indexPath.row]
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeachCell", for: indexPath) as! BeachCell
         cell.configure(with: beach, currentLocation: currentLocation)
         return cell
@@ -101,7 +122,12 @@ extension BeachesViewController: UICollectionViewDataSource {
 extension BeachesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let beaches = beaches else { return }
-        let beach = beaches[indexPath.row]
+        var beach: Beach
+        if !isSearching {
+            beach = beaches[indexPath.row]
+        } else {
+            beach = filteredBeaches[indexPath.row]
+        }
         let url = URL(string: "http://maps.apple.com/maps?address=\(beach.location.coordinate.latitude),\(beach.location.coordinate.longitude)")!
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -168,5 +194,35 @@ extension BeachesViewController: CLLocationManagerDelegate {
         label.textAlignment = .center
         label.text = error?.localizedDescription
         collectionView.backgroundView = label
+    }
+}
+
+extension BeachesViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        guard let beaches = beaches else {
+            searchBar.resignFirstResponder()
+            return
+        }
+        filteredBeaches = beaches
+        isSearching = true
+        collectionView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        isSearching = false
+        collectionView.reloadData()
+    }
+}
+
+extension BeachesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text, !text.isEmpty, let beaches = beaches else {
+            isSearching = false
+            collectionView.reloadData()
+            return
+        }
+        isSearching = true
+        self.filteredBeaches = beaches.filter{ $0.name.lowercased().contains(text.lowercased()) }
+        collectionView.reloadData()
     }
 }
