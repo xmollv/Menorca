@@ -72,6 +72,7 @@ class BeachesViewController: UIViewController {
             switch result {
             case .isSuccess(let beaches):
                 weakSelf.beaches = beaches
+                weakSelf.locationManager?.requestLocation()
             case .isFailure(let error):
                 dump(error)
             }
